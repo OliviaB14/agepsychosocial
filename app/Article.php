@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace AgePsychoSocial;
 
 use Illuminate\Database\Eloquent\Model;
 
