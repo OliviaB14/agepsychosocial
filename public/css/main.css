@@ -1,17 +1,12 @@
 #aps-button{
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    border:1px solid grey;
-    padding: 1%;
+    border-bottom:1px solid grey;
+    font-size:100%;
 }
 
-footer{
+footer, footer.page-footer{
 
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: relative !important;
     padding: 0;
     width:100%;
 }
