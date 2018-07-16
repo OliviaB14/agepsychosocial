@@ -132,12 +132,40 @@ public function resultat_f5($x){
 
 
 public function calcul_APS(Request $request){
-        $Ar = $request->age_reel;
-        $s1 = $request->resultat_f1;
-        $s2 = $request->resultat_f2;
-        $s3 = $request->resultat_f3;
-        $s4 = $request->resultat_f4;
-        $s5 = $request->resultat_f5;
+    $messages = [
+        // required
+        'age_reel.required' => "L'âge réel est obligatoire.",
+        'resultat_f1.required' => "Le score du test RLRI16 est obligatoire.",
+        'resultat_f2.required' => "Le score du test mémoire des chiffres est obligatoire.",
+        'resultat_f3.required' => "Le score du test WCST est obligatoire.",
+        'resultat_f4.required' => "Le score du test des cloches est obligatoire.",
+        'resultat_f5.required' => "Le score du test des faux pas est obligatoire.",
+
+        // integer
+        'integer' => "Ce champ n'est pas numérique.",
+
+        // digits_between
+        'min' => 'Ce champ doit être supérieur à :min',
+        'max' => 'Ce champ doit être inférieur à :max'
+
+
+    ];
+
+    $validatedData = $request->validate([
+        'age_reel' => 'required|integer',
+        'resultat_f1' => 'required|integer|min:0|max:16',
+        'resultat_f2' => 'required|integer|min:0|max:9',
+        'resultat_f3' => 'required|integer|min:0|max:6',
+        'resultat_f4' => 'required|integer|min:0|max:35',
+        'resultat_f5' => 'required|integer|min:0|max:120'
+
+    ], $messages);
+        $Ar = $validatedData->age_reel;
+        $s1 = $validatedData->resultat_f1;
+        $s2 = $validatedData->resultat_f2;
+        $s3 = $validatedData->resultat_f3;
+        $s4 = $validatedData->resultat_f4;
+        $s5 = $validatedData->resultat_f5;
 
     $s = ($this->resultat_f1($s1)+$this->resultat_f2($s2)+$this->resultat_f3($s3)+$this->resultat_f4($s4)+$this->resultat_f5($s5))/5;
     $res = 0;

@@ -6,7 +6,7 @@
 @section('css-links')
 <style>
 .carousel, .carousel-item {
-  height: 300px !important;
+  height: 600px !important;
 }
 
 .item img {

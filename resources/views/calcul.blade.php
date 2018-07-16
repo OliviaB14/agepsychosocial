@@ -18,15 +18,11 @@
             -webkit-box-shadow: 0 1px 0 0 #ff3547;
             box-shadow: 0 1px 0 0 #ff3547; }
 
+        .form-group label input[type=text]:focus:not([readonly]){
+            color:#4f4f4f;
+        }
+
         .form-simple input[type=text]:focus:not([readonly]) + label {
-            color: #4f4f4f; }
-
-        .form-simple input[type=password]:focus:not([readonly]) {
-            border-bottom: 1px solid #ff3547;
-            -webkit-box-shadow: 0 1px 0 0 #ff3547;
-            box-shadow: 0 1px 0 0 #ff3547; }
-
-        .form-simple input[type=password]:focus:not([readonly]) + label {
             color: #4f4f4f; }
     </style>
 @endsection
@@ -37,29 +33,85 @@
         @empty($res)
         <section class="form-simple col-6">
             {!! Form::open(['url' => '/calcul', 'method' => 'post']) !!}
-
-            {!! Form::label('age_reel', 'Âge réel') !!}
-            {!! Form::text('age_reel', '', ['class' => 'form-control']) !!}
-
-
-            {!! Form::label('resultat_f1', 'Résultat RLRI16') !!}
-            {!! Form::text('resultat_f1', '', ['class' => 'form-control']) !!}
-
-            {!! Form::label('resultat_f2', 'Résultat Mémoire des chiffres') !!}
-            {!! Form::text('resultat_f2', '', ['class' => 'form-control']) !!}
-
-            {!! Form::label('resultat_f3', 'Résultat WCST') !!}
-            {!! Form::text('resultat_f3', '', ['class' => 'form-control']) !!}
-
-            {!! Form::label('resultat_f4', 'Résultat au test des cloches') !!}
-            {!! Form::text('resultat_f4', '', ['class' => 'form-control']) !!}
-
-            {!! Form::label('resultat_f5', 'Résultat au test des faux pas') !!}
-            {!! Form::text('resultat_f5', '', ['class' => 'form-control']) !!}
-
+            <div class="form-group row">
+            {!! Form::label('age_reel', 'Âge réel', ['class' => 'col-sm-4 col-form-label']) !!}
+                <div class="col-sm-8">
+                    {!! Form::text('age_reel', '', ['class' => 'form-control']) !!}
+                    <small class="form-text text-muted">
+                        Entrer votre âge réel.
+                        @foreach($errors->get('age_reel') as $message)
+                           <span class="text-danger">{{ $message }}</span>
+                        @endforeach
+                    </small>
+                </div>
+            </div>
+            <div class="form-group row">
+            {!! Form::label('resultat_f1', 'Résultat RLRI16', ['class' => 'col-sm-4 col-form-label']) !!}
+                <div class="col-sm-8">
+                    {!! Form::text('resultat_f1', '', ['class' => 'form-control']) !!}
+                    <small class="form-text text-muted">
+                        Min: 0 | Max: 16
+                        @foreach($errors->get('resultat_f1') as $message)
+                            <span class="text-danger">{{ $message }}</span>
+                        @endforeach
+                    </small>
+                </div>
+            </div>
+            <div class="form-group row">
+            {!! Form::label('resultat_f2', 'Résultat Mémoire des chiffres', ['class' => 'col-sm-4 col-form-label']) !!}
+                <div class="col-sm-8">
+                    {!! Form::text('resultat_f2', '', ['class' => 'form-control']) !!}
+                    <small class="form-text text-muted">
+                        Min: 0 | Max: 9
+                        @foreach($errors->get('resultat_f2') as $message)
+                            <span class="text-danger">{{ $message }}</span>
+                        @endforeach
+                    </small>
+                </div>
+            </div>
+            <div class="form-group row">
+            {!! Form::label('resultat_f3', 'Résultat WCST', ['class' => 'col-sm-4 col-form-label']) !!}
+                <div class="col-sm-8">
+                    {!! Form::text('resultat_f3', '', ['class' => 'form-control']) !!}
+                    <small class="form-text text-muted">
+                        Min: 0 | Max: 6
+                        @foreach($errors->get('resultat_f3') as $message)
+                            <span class="text-danger">{{ $message }}</span>
+                        @endforeach
+                    </small>
+                </div>
+            </div>
+            <div class="form-group row">
+            {!! Form::label('resultat_f4', 'Résultat au test des cloches', ['class' => 'col-sm-4 col-form-label']) !!}
+                <div class="col-sm-8">
+                    {!! Form::text('resultat_f4', '', ['class' => 'form-control']) !!}
+                    <small class="form-text text-muted">
+                        Min: 0 | Max: 35
+                        @foreach($errors->get('resultat_f4') as $message)
+                            <span class="text-danger">{{ $message }}</span>
+                        @endforeach
+                    </small>
+                </div>
+            </div>
+            <div class="form-group row">
+            {!! Form::label('resultat_f5', 'Résultat au test des faux pas', ['class' => 'col-sm-4 col-form-label']) !!}
+                <div class="col-sm-8">
+                    {!! Form::text('resultat_f5', '', ['class' => 'form-control']) !!}
+                    <small class="form-text text-muted">
+                        Min: 0 | Max: 120
+                        @foreach($errors->get('resultat_f5') as $message)
+                            <span class="text-danger">{{ $message }}</span>
+                        @endforeach
+                    </small>
+                </div>
+            </div>
             {!! Form::submit('Lancer le calcul!', ['class' => 'btn btn-light-green col-12 form-control']) !!}
 
+
+
             {!! Form::close() !!}
+
+
         </section>
             @endempty
         @isset($res)
