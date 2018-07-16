@@ -4,10 +4,6 @@
     <list default="true" id="1c6dd375-c855-45bc-87e0-f54416ae8d1d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CalculController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalculController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/calcul.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calcul.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,38 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalculController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalculController.php">
+      <file leaf-file-name="homepage.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/homepage.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1295">
-              <caret line="159" column="53" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calcul.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/calcul.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="25" selection-start-line="17" selection-start-column="16" selection-end-line="34" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="189">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -78,8 +47,26 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalculController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalculController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="167" column="22" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calcul.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/calcul.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="125" column="52" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -95,11 +82,14 @@
       <find>s</find>
       <find>col-sm-10</find>
       <find>sizeof</find>
+      <find>$validatedData</find>
     </findStrings>
     <replaceStrings>
       <replace>public function</replace>
       <replace>col-sm-8</replace>
       <replace>$i = 0</replace>
+      <replace>request</replace>
+      <replace>$request</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -133,8 +123,8 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/homepage.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/homepage.blade.php" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CalculController.php" />
         <option value="$PROJECT_DIR$/resources/views/calcul.blade.php" />
@@ -252,6 +242,24 @@
             <path>
               <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
               <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -259,6 +267,12 @@
               <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
@@ -313,7 +327,7 @@
       <option name="presentableId" value="Default" />
       <updated>1529912184629</updated>
       <workItem from="1529912186776" duration="4050000" />
-      <workItem from="1531647048342" duration="13309000" />
+      <workItem from="1531647048342" duration="14437000" />
     </task>
     <task id="LOCAL-00001" summary="implantation formule + navbar">
       <created>1531729629609</created>
@@ -322,11 +336,25 @@
       <option name="project" value="LOCAL" />
       <updated>1531729629609</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="validator for aps calculus">
+      <created>1531738316369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1531738316369</updated>
+    </task>
+    <task id="LOCAL-00003" summary="carousel changes">
+      <created>1531739888296</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1531739888296</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17359000" />
+    <option name="totallyTimeSpent" value="18487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="43" width="1364" height="784" extended-state="0" />
@@ -362,7 +390,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implantation formule + navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="implantation formule + navbar" />
+    <MESSAGE value="validator for aps calculus" />
+    <MESSAGE value="carousel changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="carousel changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="213" column="52" selection-start-line="213" selection-start-column="52" selection-end-line="213" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PresentationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -532,16 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/homepage.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <element signature="e#321#1505#0#HTML" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,24 +586,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="213" column="52" selection-start-line="213" selection-start-column="52" selection-end-line="213" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/slide1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/slide2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/slide4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/slide3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/homepage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalculController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1295">
-          <caret line="159" column="53" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+        <state relative-caret-position="295">
+          <caret line="167" column="22" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/calcul.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="400">
+          <caret line="125" column="52" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="52" />
         </state>
       </provider>
     </entry>

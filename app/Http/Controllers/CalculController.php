@@ -160,12 +160,12 @@ public function calcul_APS(Request $request){
         'resultat_f5' => 'required|integer|min:0|max:120'
 
     ], $messages);
-        $Ar = $validatedData->age_reel;
-        $s1 = $validatedData->resultat_f1;
-        $s2 = $validatedData->resultat_f2;
-        $s3 = $validatedData->resultat_f3;
-        $s4 = $validatedData->resultat_f4;
-        $s5 = $validatedData->resultat_f5;
+        $Ar = $request->age_reel;
+        $s1 = $request->resultat_f1;
+        $s2 = $request->resultat_f2;
+        $s3 = $request->resultat_f3;
+        $s4 = $request->resultat_f4;
+        $s5 = $request->resultat_f5;
 
     $s = ($this->resultat_f1($s1)+$this->resultat_f2($s2)+$this->resultat_f3($s3)+$this->resultat_f4($s4)+$this->resultat_f5($s5))/5;
     $res = 0;
