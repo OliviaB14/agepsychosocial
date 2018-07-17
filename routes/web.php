@@ -17,7 +17,7 @@ Route::get('/qui-sommes-nous', 'PresentationController@qui')->name('presentation
 Route::get('/potentiel-d-adaptation', 'PresentationController@potentiel')->name('potentiel');
 Route::get('/interpretation-et-limites', 'PresentationController@interpretation')->name('interpretation');
 Route::get('/formule', 'PresentationController@formule')->name('formule');
-Route::get('/productions-scientifiques', 'ProductionsController@index')->name('productions');
+//Route::get('/productions-scientifiques', 'ProductionsController@index')->name('productions');
 
 Route::get('/calcul', 'CalculController@index')->name('calcul');
 Route::post('/calcul', 'CalculController@calcul_APS')->name('calcul');

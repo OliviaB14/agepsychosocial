@@ -172,12 +172,13 @@ public function calcul_APS(Request $request){
     if($s > 0){
         $res = $Ar + (18-$Ar)*($s)*$this->coeff_dilat;
         $res = round($res, 2);
-        redirect('calcul', ['$res' => $res]);
+    } else{
+        $res = $Ar + 2*$Ar*(-$s)**$this->coeff_dilat;
+        $res = round($res, 2);
     }
-    $res = $Ar + 2*$Ar*(-$s)**$this->coeff_dilat;
-    $res = round($res, 2);
     return view('calcul', ['res' => $res, 'age_reel' => $Ar]);
-    }
+
+}
 
 
 
