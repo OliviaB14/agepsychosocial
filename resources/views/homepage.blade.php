@@ -22,7 +22,7 @@
 @section('content')
 <div class="row">
     <div class="col">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="{{ asset('img/slide1.jpg') }}" alt="First slide">
