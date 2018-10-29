@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    protected $dateFormat = 'U';
+    //protected $dateFormat = 'U';
 }

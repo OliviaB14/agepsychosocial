@@ -18,9 +18,10 @@
                 <li class="nav-item">
                     <a href="{{ route('dashboard') }}"><img src="{{ asset('img/icons/settings.png') }}" class="img-fluid"></a>
                 </li>
-                {{--<li class="nav-item">
-                    <a href="{{ route('origines') }}">Les origines de l'âge psychosocial</a>
+                <li class="nav-item">
+                    <a href="{{ route('home') }}">Voir le site</a>
                 </li>
+                {{--
                 <li class="nav-item">
                     <a href="{{ route('presentation') }}">Qui sommes-nous ?</a>
                 </li>
@@ -36,9 +37,6 @@
                 <li class="nav-item">
                     <a href="{{ route('productions') }}">Productions scientifiques</a>
                 </li>--}}
-                <li class="nav-item" id="aps-button">
-                    <a href="{{ route('calcul') }}">Calculer l'âge psycho-social</a>
-                </li>
 
             </ul>
         </div>

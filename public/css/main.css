@@ -3,7 +3,10 @@
     border-bottom:1px solid grey;
     font-size:100%;
 }
-
+.nav-item img{
+    width: 26px;
+    height: auto;
+}
 footer, footer.page-footer{
 
     position: relative !important;
