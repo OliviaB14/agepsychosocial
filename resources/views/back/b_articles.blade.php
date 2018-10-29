@@ -9,7 +9,7 @@
 
 @section('content')
 
-    <section class="my-5">
+    <section class="">
 
         <!-- Section heading -->
         <div class="row main-row">

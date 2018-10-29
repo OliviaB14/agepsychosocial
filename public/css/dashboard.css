@@ -22,8 +22,9 @@ h4{
 }
 
 .main-row{
-    background: lightgrey;
+    background: #212529;
     padding: 2%;
+    color: #fff;
 }
 
 .action-btn{
@@ -36,8 +37,4 @@ a.btn.action-btn{
 .action-btn img, .article-settings img{
     width: 30px;
     height: auto;
-}
-
-.article-settings{
-
 }

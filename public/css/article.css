@@ -46,6 +46,7 @@
     height:42px;
     top: 0;
     left: 0;
+    cursor: pointer;
 }
 
 .article-settings .col-3:hover{
