@@ -15,9 +15,11 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                @auth
                 <li class="nav-item">
                     <a href="{{ route('dashboard') }}"><img src="{{ asset('img/icons/settings.png') }}" class="img-fluid"></a>
                 </li>
+                @endauth
                 {{--<li class="nav-item">
                     <a href="{{ route('origines') }}">Les origines de l'âge psychosocial</a>
                 </li>
