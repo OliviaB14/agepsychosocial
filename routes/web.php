@@ -61,8 +61,14 @@ Route::group(['middleware' => ['auth']], function () {
      * articles
      */
     Route::get('/dashboard/articles', 'ArticlesController@index')->name('b_articles');
+
     Route::get('/dashboard/articles/create', 'ArticlesController@createNew')->name('b_articles');
     Route::post('/dashboard/articles/create', 'ArticlesController@create');
+
     Route::get('/dashboard/article/{id}', 'ArticlesController@show');
+    Route::get('/dashboard/admin/article/{id}', 'ArticlesController@show_edit')->name("edit_article");
+
+    Route::delete('/dashboard/article/delete/{id}', 'ArticlesController@delete')->name('delete_article');
+
 
 });

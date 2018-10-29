@@ -15,9 +15,11 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+
                 <li class="nav-item">
                     <a href="{{ route('dashboard') }}"><img src="{{ asset('img/icons/settings.png') }}" class="img-fluid"></a>
                 </li>
+
                 <li class="nav-item">
                     <a href="{{ route('home') }}">Voir le site</a>
                 </li>

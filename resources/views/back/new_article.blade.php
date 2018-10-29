@@ -4,7 +4,11 @@
     <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
 
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script>
+    <script>tinymce.init({ selector: "textarea",  // change this value according to your HTML
+            plugins : 'advlist autolink link image lists charmap print preview',
+            menubar: "insert",
+            toolbar: "bold italic underline strikethrough | alignleft, aligncenter, alignright, alignjustify, formatselect, fontselect, fontsizeselect, cut, copy, paste, bullist, numlist, outdent, indent, blockquote, undo, redo, removeformat, subscript, superscript\n",
+            });</script>
 @endsection
 
 @section('content')

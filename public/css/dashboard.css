@@ -5,6 +5,7 @@
 }
 
 
+
 input{
     width:100%;
     -webkit-border-radius: 30px;
@@ -20,3 +21,23 @@ h4{
     margin: 7% auto;
 }
 
+.main-row{
+    background: lightgrey;
+    padding: 2%;
+}
+
+.action-btn{
+    border:1px solid black;
+    padding: 2%;
+}
+a.btn.action-btn{
+    color:black;
+}
+.action-btn img, .article-settings img{
+    width: 30px;
+    height: auto;
+}
+
+.article-settings{
+
+}
