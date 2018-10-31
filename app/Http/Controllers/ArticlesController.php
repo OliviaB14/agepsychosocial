@@ -24,7 +24,7 @@ class ArticlesController extends Controller
     public function index(){
         $articles = Article::all();
         $user = Auth::user();
-        return view('back.b_articles', [
+        return view('back.articles', [
             'articles' => $articles,
             'user' => $user
         ]);

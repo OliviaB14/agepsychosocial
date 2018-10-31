@@ -1,3 +1,22 @@
+body{
+    background: #fff;
+}
+main{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.sidebar{
+    background:#021F29;
+    color:white;
+    text-align: center;
+}
+
+#title-row{
+    background: #e0cccc;
+    box-shadow: 1px 1px 11px 0px grey;
+}
+
 #aps-button{
     text-transform: uppercase;
     border-bottom:1px solid grey;

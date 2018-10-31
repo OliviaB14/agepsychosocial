@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    //protected $dateFormat = 'U';
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

@@ -41,30 +41,43 @@
 </head>
 <body>
 <div id="app">
-    @include('includes.back_navbar')
-    <main class="py-4">
+    @include('includes.navbar')
+    <main class="py-0">
         <div class="container-fluid">
             <div class="row">
-                <div class="sidebar col-2">
+                <div class="sidebar col-1">
                     <p class="text-center font-weight-bold">{{ $user->first_name }}, vous êtes connecté(e).</p>
-                    <img src="{{asset('img/back/profile.png')}}" class="img-fluid">
+
                     <ul class="nav flex-column grey lighten-4 py-4">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('dashboard') }}">Profil</a>
+                            <a class="nav-link active" href="{{ route('dashboard') }}">
+                                <img src="{{ asset('img/icons/avatar.svg') }}" alt="Profil">
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('dashboard/articles/create') }}">Ecrire un article</a>
+                            <a class="nav-link" href="{{ url('dashboard/articles/create') }}">
+                                <img src="{{ asset('img/icons/edit.svg') }}" alt="Éditer le profil">
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('dashboard/articles') }}">Articles</a>
+                            <a class="nav-link" href="{{ url('dashboard/articles') }}">
+                                <img src="{{ asset('img/icons/articles.svg') }}" alt="Tous les articles">
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a>
+                            <a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <img src="{{ asset('img/icons/logout.svg') }}" alt="Déconnexion">
+                            </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://creativebloom.fr">
+                                <img src="{{ asset('img/icons/help.svg') }}" alt="Contacter creativebloom.fr">
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-9 text-center">
+                <div class="col-11">
                     @yield('content')
                 </div>
             </div>

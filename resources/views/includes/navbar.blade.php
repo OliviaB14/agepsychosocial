@@ -16,10 +16,13 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 @auth
-                <li class="nav-item">
-                    <a href="{{ route('dashboard') }}"><img src="{{ asset('img/icons/settings.png') }}" class="img-fluid"></a>
-                </li>
-                @endauth
+                    <li class="nav-item">
+                        <a href="{{ route('dashboard') }}"><img src="{{ asset('img/icons/settings.png') }}" class="img-fluid"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('home') }}">Voir le site</a>
+                    </li>
+                @else
                 {{--<li class="nav-item">
                     <a href="{{ route('origines') }}">Les origines de l'âge psychosocial</a>
                 </li>
@@ -41,7 +44,7 @@
                 <li class="nav-item" id="aps-button">
                     <a href="{{ route('calcul') }}">Calculer l'âge psycho-social</a>
                 </li>
-
+                @endauth
             </ul>
         </div>
     </div>
