@@ -12,7 +12,7 @@
     <section class="">
 
 
-        <div class="row main-row">
+        <div class="row main-row mb-3">
             <h2 class="h1-responsive font-weight-bold text-center col-6">{{count($articles)}}
                 @if(count($articles)>1)
                     articles
@@ -22,7 +22,7 @@
             </h2>
             <div class="col-6">
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher un article" title="">
-                <p class="text-center dark-grey-text w-responsive mx-auto">Rechercher un article par son titre</p>
+                <p class="text-center w-responsive mx-auto">Rechercher un article par son titre</p>
             </div>
         </div>
 
@@ -49,11 +49,11 @@
                             </p>
                             <p>{{ $article->created_at->toDatestring() }}</p>
                             @auth
-                                <a class="action-btn btn" href="/dashboard/admin/article/{{$article->id}}">
+                                <a class="action-btn btn" href="{{ route('edit_article', ['id' => $article->id]) }}">
                                     <img src="{{ asset('img/icons/edit.png') }}" class="img-fluid">Éditer l'article
                                 </a>
                             @endauth
-                            <a class="btn action-btn" href="/dashboard/article/{{$article->id}}">
+                            <a class="btn action-btn" href="{{ route('show_article', [$article->id]) }}">
                                 <img src="{{ asset('img/icons/see.png') }}" class="img-fluid">Voir l'article
                             </a>
                         </div>

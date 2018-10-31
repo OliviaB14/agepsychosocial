@@ -60,12 +60,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('dashboard/articles/create') }}">
+                            <a class="nav-link" href="{{ route('create_article') }}">
                                 <img src="{{ asset('img/icons/edit.svg') }}" alt="Éditer le profil">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('dashboard/articles') }}">
+                            <a class="nav-link" href="{{ route('show_articles') }}">
                                 <img src="{{ asset('img/icons/articles.svg') }}" alt="Tous les articles">
                             </a>
                         </li>

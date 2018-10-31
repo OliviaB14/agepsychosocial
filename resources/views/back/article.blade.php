@@ -110,7 +110,7 @@
                                     <p>Êtes-vous sûr(e) de votre choix ? L'article sera définitivement supprimé.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <form action="{{ url('/dashboard/article/delete', ['id' => $article->id]) }}" method="post">
+                                    <form action="{{ route('delete_article', ['id' => $article->id]) }}" method="post">
                                         {!! method_field('delete') !!}
                                         {!! csrf_field() !!}
                                         <button type="submit" class="btn btn-danger">Supprimer</button>

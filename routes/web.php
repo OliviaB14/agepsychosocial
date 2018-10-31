@@ -25,7 +25,7 @@ Route::get('/qui-sommes-nous', 'PresentationController@qui')->name('presentation
 Route::get('/potentiel-d-adaptation', 'PresentationController@potentiel')->name('potentiel');
 Route::get('/interpretation-et-limites', 'PresentationController@interpretation')->name('interpretation');
 Route::get('/formule', 'PresentationController@formule')->name('formule');
-//Route::get('/productions-scientifiques', 'ProductionsController@index')->name('productions');
+Route::get('/productions-scientifiques', 'ProductionsController@index')->name('productions');
 
 /*
  *
@@ -48,6 +48,7 @@ Auth::routes();
  *
  */
 
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
@@ -60,15 +61,15 @@ Route::group(['middleware' => ['auth']], function () {
     /*
      * articles
      */
-    Route::get('/dashboard/articles', 'ArticlesController@index')->name('b_articles');
+    Route::get('/articles/all', 'ArticlesController@index')->name('show_articles');
 
-    Route::get('/dashboard/articles/create', 'ArticlesController@createNew')->name('b_articles');
-    Route::post('/dashboard/articles/create', 'ArticlesController@create');
+    Route::get('/articles/new', 'ArticlesController@createNew')->name('create_article');
+    Route::post('/articles/new', 'ArticlesController@create');
 
-    Route::get('/dashboard/article/{id}', 'ArticlesController@show');
-    Route::get('/dashboard/admin/article/{id}', 'ArticlesController@show_edit')->name("edit_article");
+    Route::get('/article/{id}', 'ArticlesController@show')->name("show_article");
+    Route::get('/article/{id}/edit', 'ArticlesController@show_edit')->name("edit_article");
 
-    Route::delete('/dashboard/article/delete/{id}', 'ArticlesController@delete')->name('delete_article');
+    Route::delete('/article/{id}/delete', 'ArticlesController@delete')->name('delete_article');
 
     Route::get('article/{id}/image', function ($id) {
         // Find the article
