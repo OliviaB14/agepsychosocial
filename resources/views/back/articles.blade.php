@@ -44,7 +44,7 @@
                             <h3 class="font-weight-bold mb-3"><strong>{{ $article->title }}</strong></h3>
                             <p class="dark-grey-text">
                                 <?php
-                                echo myTruncate(html_entity_decode($article->content), 100);
+                                echo myTruncate(html_entity_decode($article->text), 100);
                                 ?>
                             </p>
                             <p>{{ $article->created_at->toDatestring() }}</p>

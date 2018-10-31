@@ -6,33 +6,43 @@
 
 
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({
-            selector:'textarea',
-            plugins: "image",
+    <script>tinymce.init({ selector: "textarea",  // change this value according to your HTML
+            plugins : 'advlist autolink link image lists charmap print preview',
             menubar: "insert",
-            toolbar: "image"
+            toolbar: "bold italic underline strikethrough | alignleft, aligncenter, alignright, alignjustify | formatselect, fontselect, fontsizeselect | cut, copy, paste, bullist, numlist, outdent, indent, blockquote, undo, redo, removeformat, subscript, superscript\n",
         });</script>
 @endsection
 
 @section('content')
 
     @if($edit)
-    <div class="mt-3">
-        {!! Form::model(['url' => '/dashboard/articles/create']) !!}
-        <div class="form-group">
-            {!! Form::label('title', 'Titre de l\'article') !!}
-            {!! Form::text('title', null, ['class' => 'form-control']) !!}
+        <div class="row main-row">
+            <h3 class="col-12">Éditer l'article : <strong>{{ $article->title }}</strong></h3>
         </div>
-        <div class="form-group">
-            {!! Form::label('main_img', 'Image principale') !!}
-            {!! Form::file('main_img', ['class' => 'form-control']); !!}
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ url("article/$article->id/image") }}" class="img-thumbnail">
+                <p class="font-italic">Image actuelle</p>
+            </div>
+            <div class="mt-3 col-md-8">
+                {!! Form::model($article, ['route' => ['update_article', $article->id], 'files' => true, 'method' => 'put']) !!}
+                <div class="form-group">
+                    {!! Form::label('title', 'Titre de l\'article') !!}
+                    {!! Form::text('title', null, ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
+
+                    {!! Form::label('image', 'Changer l\'image principale') !!}
+                    {!! Form::file('image', ['class' => 'form-control']); !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::textarea('text', null, ['placeholder' => 'Description du projet']); !!}
+                </div>
+                {!! Form::submit('Publier', ['class' => 'btn btn-light-green btn-block']) !!}
+                {!! Form::close() !!}
+            </div>
         </div>
-        <div class="form-group">
-            {!! Form::textarea('text_content', null, ['placeholder' => 'Description du projet']); !!}
-        </div>
-        {!! Form::submit('Publier', ['class' => 'btn btn-light-green btn-block']) !!}
-        {!! Form::close() !!}
-    </div>
+
     @else
 
 
@@ -131,7 +141,7 @@
                         <img src="{{ url("article/$article->id/image") }}">
                     </div>
                     <div class="col-md-6">
-                        <?php echo html_entity_decode($article->content);?>
+                        <?php echo html_entity_decode($article->text);?>
                     </div>
                 </div>
 

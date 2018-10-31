@@ -23,23 +23,23 @@ class PresentationController extends Controller
      */
     public function origines()
     {
-        return view('origines');
+        return view('pages.origines');
     }
     public function qui()
     {
-        return view('presentation');
+        return view('pages.presentation');
     }
     public function potentiel()
     {
-        return view('potentiel');
+        return view('pages.potentiel');
     }
     public function interpretation()
     {
-        return view('intepretation');
+        return view('pages.intepretation');
     }
     public function formule()
     {
-        return view('formule');
+        return view('pages.formule');
     }
 
 }

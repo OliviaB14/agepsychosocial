@@ -40,12 +40,16 @@ class ArticlesController extends Controller
     public function create(Request $request){
         $request->validate([
             'title' => 'required|string',
-            'content' => 'nullable|string',
+            'text' => 'nullable|string',
             'main_img' => 'nullable'
         ]);
         $new = new Article();
-        $new->title = $request->title;
-        $new->content = $request->text_content;
+
+        if($request->title != $new->title){
+            $new->title = $request->title;
+        }
+
+        $new->text = $request->text;
 
         if(isset($request->image)){
             $file = $request->file('image');
@@ -60,7 +64,23 @@ class ArticlesController extends Controller
 
         $new->save();
 
-        return redirect('dashboard/articles');
+        return redirect(route('show_articles'));
+    }
+
+    public function update($id, Request $request){
+        $article = Article::find($id);
+
+        $article->title = $request->title;
+        $article->text = $request->text;
+        if(isset($request->image)){
+            $file = $request->file('image');
+
+            // Get the contents of the file
+            $contents = $file->openFile()->fread($file->getSize());
+            $article->main_img = $contents;
+        }
+        $article->save();
+        return redirect(route('show_articles'));
     }
 
     public function show($id){
@@ -88,7 +108,7 @@ class ArticlesController extends Controller
     public function delete($id){
         $to_delete = Article::find($id);
         $to_delete->delete();
-        return redirect('dashboard/articles');
+        return redirect(route('show_articles'));
     }
 
 

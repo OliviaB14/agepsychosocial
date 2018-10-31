@@ -14,7 +14,7 @@
 @section('content')
 
         <div class="mt-3">
-            {!! Form::open(['url' => '/dashboard/articles/create', 'files' => true]) !!}
+            {!! Form::open(['url' => '/articles/new', 'files' => true]) !!}
             <div class="form-group">
                 {!! Form::label('title', 'Titre de l\'article') !!}
                 {!! Form::text('title', null, ['class' => 'form-control']) !!}
@@ -24,7 +24,7 @@
                 {!! Form::file('image', ['class' => 'form-control']); !!}
             </div>
             <div class="form-group">
-                {!! Form::textarea('text_content', null, ['placeholder' => 'Description du projet']); !!}
+                {!! Form::textarea('text', null, ['placeholder' => 'Description du projet']); !!}
             </div>
             {!! Form::submit('Publier', ['class' => 'btn btn-light-green btn-block']) !!}
             {!! Form::close() !!}
