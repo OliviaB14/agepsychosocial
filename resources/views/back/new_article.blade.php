@@ -2,6 +2,7 @@
 
 @section('css-links')
     <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
+    <link rel="stylesheet" href="{{asset('css/new_article.css')}}">
 
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
     <script>tinymce.init({ selector: "textarea",  // change this value according to your HTML
@@ -26,9 +27,27 @@
             <div class="form-group">
                 {!! Form::textarea('text', null, ['placeholder' => 'Description du projet']); !!}
             </div>
+            {{--<div class="form-group">--}}
+                {{--<label class='form-switch'>--}}
+                    {{--<input class='field' type='checkbox' name="published" id="draft">--}}
+                    {{--<span class='toggle'></span>--}}
+                    {{--<span class='text'>Publier l'article</span>--}}
+                {{--</label>--}}
+            {{--</div>--}}
+            <div class="form-group">
+                <div class="wrap">
+                    <div class="block">
+                        <input data-index="0" id="published" name="published" type="checkbox" />
+                        <label for="published" id="status"></label>
+                        <span class="text">Article à publier</span>
+                    </div>
+                </div>
+            </div>
+
             {!! Form::submit('Publier', ['class' => 'btn btn-light-green btn-block']) !!}
             {!! Form::close() !!}
         </div>
 
 
+<script src="{{ asset('js/new_article.js') }}"></script>
 @endsection

@@ -42,20 +42,38 @@
                         </div>
                         <div class="col-lg-7 col-xl-8">
                             <h3 class="font-weight-bold mb-3"><strong>{{ $article->title }}</strong></h3>
+                            <div class="status">
+
+                                    @if($article->published)
+                                    <span class='published'>Publié</span>
+                                    @else
+                                    <span class='draft'>Brouillon</span>
+                                    @endif
+
+                            </div>
                             <p class="dark-grey-text">
                                 <?php
                                 echo myTruncate(html_entity_decode($article->text), 100);
                                 ?>
                             </p>
                             <p>{{ $article->created_at->toDatestring() }}</p>
+                            <a class="btn action-btn" href="{{ route('show_article', [$article->id]) }}">
+                                <img src="{{ asset('img/icons/see.png') }}" class="img-fluid">Voir l'article
+                            </a>
                             @auth
                                 <a class="action-btn btn" href="{{ route('edit_article', ['id' => $article->id]) }}">
                                     <img src="{{ asset('img/icons/edit.png') }}" class="img-fluid">Éditer l'article
                                 </a>
+                                <form action="{{ route('delete_article', ['id' => $article->id]) }}" class="d-inline-block" method="post">
+                                    {!! method_field('delete') !!}
+                                    {!! csrf_field() !!}
+                                    <button class="action-btn btn p-3" href="{{ route('delete_article', ['id' => $article->id]) }}">
+                                        <img src="{{ asset('img/icons/delete.svg') }}" class="img-fluid">Supprimer l'article
+                                    </button>
+                                </form>
+
                             @endauth
-                            <a class="btn action-btn" href="{{ route('show_article', [$article->id]) }}">
-                                <img src="{{ asset('img/icons/see.png') }}" class="img-fluid">Voir l'article
-                            </a>
+
                         </div>
                     </div>
                     <hr class="my-5">

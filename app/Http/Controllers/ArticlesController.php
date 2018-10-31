@@ -5,6 +5,7 @@ namespace AgePsychoSocial\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use AgePsychoSocial\Article;
+use Illuminate\Support\Facades\Storage;
 
 
 
@@ -57,7 +58,17 @@ class ArticlesController extends Controller
             // Get the contents of the file
             $contents = $file->openFile()->fread($file->getSize());
             $new->main_img = $contents;
+        } else{
+            // Get the contents of the file
+            $new->main_img = asset('default.png');
         }
+
+        if($request->published == "on"){
+            $new->published = 1;
+        } else{
+            $new->published = 0;
+        }
+
 
 
         $new->user_id = (int) Auth::id();
