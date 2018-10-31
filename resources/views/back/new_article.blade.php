@@ -14,14 +14,14 @@
 @section('content')
 
         <div class="mt-3">
-            {!! Form::open(['url' => '/dashboard/articles/create']) !!}
+            {!! Form::open(['url' => '/dashboard/articles/create', 'files' => true]) !!}
             <div class="form-group">
                 {!! Form::label('title', 'Titre de l\'article') !!}
                 {!! Form::text('title', null, ['class' => 'form-control']) !!}
             </div>
             <div class="form-group">
-                {!! Form::label('main_img', 'Image principale') !!}
-                {!! Form::file('main_img', ['class' => 'form-control']); !!}
+                {!! Form::label('image', 'Image principale') !!}
+                {!! Form::file('image', ['class' => 'form-control']); !!}
             </div>
             <div class="form-group">
                 {!! Form::textarea('text_content', null, ['placeholder' => 'Description du projet']); !!}

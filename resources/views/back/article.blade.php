@@ -37,7 +37,7 @@
 
 
 
-        <div class="row article-settings justify-content-center p-4">
+        <div class="row article-settings text-center justify-content-center p-4">
             @auth
                 <div class="col-3">
                     <a href="{{ route('edit_article', ['id', $article->id]) }}" class="my-btn">
@@ -126,7 +126,16 @@
         <div class="card">
             <div class="card-body">
                 <h2>{{ $article->title }}</h2>
-                <?php echo html_entity_decode($article->content);?>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ url("article/$article->id/image") }}">
+                    </div>
+                    <div class="col-md-6">
+                        <?php echo html_entity_decode($article->content);?>
+                    </div>
+                </div>
+
+
 
             </div>
         </div>

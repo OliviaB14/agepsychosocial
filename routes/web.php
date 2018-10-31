@@ -70,5 +70,14 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::delete('/dashboard/article/delete/{id}', 'ArticlesController@delete')->name('delete_article');
 
+    Route::get('article/{id}/image', function ($id) {
+        // Find the article
+        $article = AgePsychoSocial\Article::find($id);
+
+        // Return the image in the response with the correct MIME type
+        return response()->make($article->main_img, 200, array(
+            'Content-Type' => (new finfo(FILEINFO_MIME))->buffer($article->main_img)
+        ));
+    });
 
 });

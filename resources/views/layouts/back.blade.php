@@ -50,7 +50,12 @@
 
                     <ul class="nav flex-column grey lighten-4 py-4">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('dashboard') }}">
+                            <a href="{{ route('home') }}" class="nav-link">
+                                <img src="{{ asset('img/icons/see.svg') }}" alt="Voir le site">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dashboard') }}">
                                 <img src="{{ asset('img/icons/avatar.svg') }}" alt="Profil">
                             </a>
                         </li>
@@ -64,16 +69,17 @@
                                 <img src="{{ asset('img/icons/articles.svg') }}" alt="Tous les articles">
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://creativebloom.fr" target="_blank">
+                                <img src="{{ asset('img/icons/help.svg') }}" alt="Contacter creativebloom.fr">
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <img src="{{ asset('img/icons/logout.svg') }}" alt="Déconnexion">
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://creativebloom.fr">
-                                <img src="{{ asset('img/icons/help.svg') }}" alt="Contacter creativebloom.fr">
-                            </a>
                         </li>
                     </ul>
                 </div>
