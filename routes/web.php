@@ -36,6 +36,29 @@ Route::get('/productions-scientifiques', 'ProductionsController@index')->name('p
 Route::get('/calcul', 'CalculController@index')->name('calcul');
 Route::post('/calcul', 'CalculController@calcul_APS')->name('calcul');
 
+Route::get('article/{id}/image', function ($id) {
+    // Find the article
+    $article = AgePsychoSocial\Article::find($id);
+
+    // Return the image in the response with the correct MIME type
+    return response()->make($article->main_img, 200, array(
+        'Content-Type' => (new finfo(FILEINFO_MIME))->buffer($article->main_img)
+    ));
+});
+
+
+
+
+/*
+ *
+ * Guest pages
+ *
+ */
+Route::group(['middleware' => ['guest']], function () {
+    Route::get('/aps/article/{id}', 'ProductionsController@show')->name("guest_article");
+});
+
+
 
 
 
@@ -73,15 +96,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::delete('/article/{id}/delete', 'ArticlesController@delete')->name('delete_article');
 
-    Route::get('article/{id}/image', function ($id) {
-        // Find the article
-        $article = AgePsychoSocial\Article::find($id);
 
-        // Return the image in the response with the correct MIME type
-        return response()->make($article->main_img, 200, array(
-            'Content-Type' => (new finfo(FILEINFO_MIME))->buffer($article->main_img)
-        ));
-    });
 
     Route::get('/filemanager', '\UniSharp\LaravelFilemanager\controllers\LfmController@show');
     Route::post('/filemanager/upload', '\UniSharp\LaravelFilemanager\controllers\UploadController@upload');

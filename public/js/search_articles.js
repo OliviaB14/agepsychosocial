@@ -13,3 +13,19 @@ function myFunction() {
         }
     }
 }
+
+function search_as_guest() {
+    var input, filter, list, el, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    list = document.getElementById("articles-list");
+    el = list.getElementsByClassName("col-md-3");
+    for (i = 0; i < el.length; i++) {
+        a = el[i].getElementsByTagName("h1")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            el[i].style.display = "";
+        } else {
+            el[i].style.display = "none";
+        }
+    }
+}

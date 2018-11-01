@@ -1,0 +1,20 @@
+.article-settings img{
+    width: 30px;
+    height: auto;
+}
+
+.main-row{
+    background: #2e78c1;
+    padding: 2%;
+    color: #fff;
+    box-shadow: 1px 1px 11px 0px grey;
+}
+
+#go_back{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-size: larger;
+
+}

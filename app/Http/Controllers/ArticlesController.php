@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use AgePsychoSocial\Article;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\URL;
 
 
 
@@ -17,8 +18,7 @@ class ArticlesController extends Controller
     public function __construct()
     {
         //$this->middleware('auth');
-        $this->Url = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
-        $this->Url .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+        $this->Url = URL::current();;
 
     }
 

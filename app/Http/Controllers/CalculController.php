@@ -27,7 +27,7 @@ class CalculController extends Controller
      */
     public function index()
     {
-        return view('calcul');
+        return view('pages.calcul');
     }
 
     public function resultat_f1($x){
@@ -176,7 +176,7 @@ public function calcul_APS(Request $request){
         $res = $Ar + 2*$Ar*(-$s)**$this->coeff_dilat;
         $res = round($res, 2);
     }
-    return view('calcul', ['res' => $res, 'age_reel' => $Ar]);
+    return view('pages.calcul', ['res' => $res, 'age_reel' => $Ar]);
 
 }
 

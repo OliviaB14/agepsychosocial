@@ -1,17 +1,14 @@
 @extends('layouts.back')
 
+@include('includes.helpers_functions')
+
 @section('css-links')
     <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
-
-
-
 @endsection
 
 @section('content')
 
     <section class="">
-
-
         <div class="row main-row mb-3">
             <h2 class="h1-responsive font-weight-bold text-center col-6">{{count($articles)}}
                 @if(count($articles)>1)
@@ -53,11 +50,9 @@
                             <p>{{ $article->created_at->toDatestring() }}</p>
 
                             <div class="article-content dark-grey-text">
-
-                                    <?php
-                                    echo myTruncate(html_entity_decode($article->text), 100);
-                                    ?>
-
+                                <?php
+                                echo myTruncate(html_entity_decode($article->text), 100);
+                                ?>
                             </div>
 
 
@@ -75,9 +70,7 @@
                                         <img src="{{ asset('img/icons/delete.svg') }}" class="img-fluid">Supprimer l'article
                                     </button>
                                 </form>
-
                             @endauth
-
                         </div>
                     </div>
                     <hr class="my-5">
@@ -86,21 +79,6 @@
         </ul>
     </section>
 
-
-    <?php function myTruncate($string, $limit, $break=".", $pad="...")
-    {
-        // return with no change if string is shorter than $limit
-        if(strlen($string) <= $limit) return $string;
-
-        // is $break present between $limit and the end of the string?
-        if(false !== ($breakpoint = strpos($string, $break, $limit))) {
-            if($breakpoint < strlen($string) - 1) {
-                $string = substr($string, 0, $breakpoint) . $pad;
-            }
-        }
-
-        return $string;
-    } ?>
 
     <script src="{{asset('js/article_status.js')}}"></script>
 

@@ -53,13 +53,13 @@
 
     @else
         <div class="row article-settings text-center justify-content-center p-4">
-            @auth
-                <div class="col-3">
-                    <a href="{{ route('edit_article', ['id' => $article->id]) }}" class="my-btn">
-                        <img src="{{ asset('img/icons/edit.svg') }}" class="img-fluid" title="Editer l'article">
-                    </a>
-                </div>
-            @endauth
+
+            <div class="col-3">
+                <a href="{{ route('edit_article', ['id' => $article->id]) }}" class="my-btn">
+                    <img src="{{ asset('img/icons/edit.svg') }}" class="img-fluid" title="Editer l'article">
+                </a>
+            </div>
+
             <div class="col-3">
                 <div class="share-button">
                     <div class="share-button__back">
@@ -106,7 +106,7 @@
                 </div>
 
             </div>
-            @auth
+
             <div class="col-3" data-toggle="modal" data-target="#exampleModal">
                 <img src="{{ asset('img/icons/delete.svg') }}" class="img-fluid" >
             </div>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            @endauth
+
         </div>
         <div class="article">
             <div class="card">
