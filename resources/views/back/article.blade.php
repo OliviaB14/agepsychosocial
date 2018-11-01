@@ -12,41 +12,44 @@
 @section('content')
 
     @if($edit)
-        <div class="row main-row">
-            <h3 class="col-12">Éditer l'article : <strong>{{ $article->title }}</strong></h3>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="{{ url("article/$article->id/image") }}" class="img-thumbnail">
-                <p class="font-italic">Image actuelle</p>
+        <div class="article">
+            <div class="row main-row">
+                <h3 class="col-12">Éditer l'article : <strong>{{ $article->title }}</strong></h3>
             </div>
-            <div class="mt-3 col-md-8">
-                {!! Form::model($article, ['route' => ['update_article', $article->id], 'files' => true, 'method' => 'put']) !!}
-                <div class="form-group">
-                    {!! Form::label('title', 'Titre de l\'article') !!}
-                    {!! Form::text('title', null, ['class' => 'form-control']) !!}
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{ url("article/$article->id/image") }}" class="img-thumbnail">
+                    <p class="font-italic">Image actuelle</p>
                 </div>
-                <div class="form-group">
+                <div class="mt-3 col-md-8">
+                    {!! Form::model($article, ['route' => ['update_article', $article->id], 'files' => true, 'method' => 'put']) !!}
+                    <div class="form-group">
+                        {!! Form::label('title', 'Titre de l\'article') !!}
+                        {!! Form::text('title', null, ['class' => 'form-control']) !!}
+                    </div>
+                    <div class="form-group">
 
-                    {!! Form::label('image', 'Changer l\'image principale') !!}
-                    {!! Form::file('image', ['class' => 'form-control']); !!}
-                </div>
-                <div class="form-group">
-                    {!! Form::textarea('text', null, ['placeholder' => 'Description du projet', 'rows' => '4']); !!}
-                </div>
-                <div class="form-group">
-                    <div class="wrap">
-                        <div class="block">
-                            <input data-index="0" id="published" name="published" type="checkbox" />
-                            <label for="published"></label>
-                            <span>Publier l'article</span>
+                        {!! Form::label('image', 'Changer l\'image principale') !!}
+                        {!! Form::file('image', ['class' => 'form-control']); !!}
+                    </div>
+                    <div class="form-group">
+                        {!! Form::textarea('text', null, ['placeholder' => 'Description du projet', 'rows' => '4']); !!}
+                    </div>
+                    <div class="form-group">
+                        <div class="wrap">
+                            <div class="block">
+                                <input data-index="0" id="published" name="published" type="checkbox" />
+                                <label for="published"></label>
+                                <span>Publier l'article</span>
+                            </div>
                         </div>
                     </div>
+                    {!! Form::submit('Publier', ['class' => 'btn btn-light-green btn-block']) !!}
+                    {!! Form::close() !!}
                 </div>
-                {!! Form::submit('Publier', ['class' => 'btn btn-light-green btn-block']) !!}
-                {!! Form::close() !!}
             </div>
         </div>
+
 
     @else
         <div class="row article-settings text-center justify-content-center p-4">
@@ -134,15 +137,17 @@
             </div>
             @endauth
         </div>
-        <div class="card">
-            <div class="card-body">
-                <h2>{{ $article->title }}</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="{{ url("article/$article->id/image") }}">
-                    </div>
-                    <div class="col-md-6">
-                        <?php echo html_entity_decode($article->text);?>
+        <div class="article">
+            <div class="card">
+                <div class="card-body">
+                    <h2>{{ $article->title }}</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ url("article/$article->id/image") }}">
+                        </div>
+                        <div class="col-md-6">
+                            <?php echo html_entity_decode($article->text);?>
+                        </div>
                     </div>
                 </div>
             </div>

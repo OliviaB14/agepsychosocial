@@ -41,22 +41,26 @@
                             </div>
                         </div>
                         <div class="col-lg-7 col-xl-8">
-                            <h3 class="font-weight-bold mb-3"><strong>{{ $article->title }}</strong></h3>
-                            <div class="status">
-
-                                    @if($article->published)
+                            <div class="status d-inline">
+                                @if($article->published)
                                     <span class='published'>Publié</span>
-                                    @else
+                                @else
                                     <span class='draft'>Brouillon</span>
-                                    @endif
+                                @endif
+                            </div>
+                            <h3 class="font-weight-bold mb-3 d-inline-block"><strong>{{ $article->title }}</strong></h3>
+
+                            <p>{{ $article->created_at->toDatestring() }}</p>
+
+                            <div class="article-content dark-grey-text">
+
+                                    <?php
+                                    echo myTruncate(html_entity_decode($article->text), 100);
+                                    ?>
 
                             </div>
-                            <p class="dark-grey-text">
-                                <?php
-                                echo myTruncate(html_entity_decode($article->text), 100);
-                                ?>
-                            </p>
-                            <p>{{ $article->created_at->toDatestring() }}</p>
+
+
                             <a class="btn action-btn" href="{{ route('show_article', [$article->id]) }}">
                                 <img src="{{ asset('img/icons/see.svg') }}" class="img-fluid">Voir l'article
                             </a>
