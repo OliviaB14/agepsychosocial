@@ -5,12 +5,8 @@
     <link rel="stylesheet" href="{{asset('css/article.css')}}">
 
 
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({ selector: "textarea",  // change this value according to your HTML
-            plugins : 'advlist autolink link image lists charmap print preview',
-            menubar: "insert",
-            toolbar: "bold italic underline strikethrough | alignleft, aligncenter, alignright, alignjustify | formatselect, fontselect, fontsizeselect | cut, copy, paste, bullist, numlist, outdent, indent, blockquote, undo, redo, removeformat, subscript, superscript\n",
-        });</script>
+    <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('js/init_editor.js') }}"></script>
 @endsection
 
 @section('content')
@@ -36,7 +32,7 @@
                     {!! Form::file('image', ['class' => 'form-control']); !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::textarea('text', null, ['placeholder' => 'Description du projet']); !!}
+                    {!! Form::textarea('text', null, ['placeholder' => 'Description du projet', 'rows' => '4']); !!}
                 </div>
                 <div class="form-group">
                     <div class="wrap">
@@ -57,7 +53,7 @@
             @auth
                 <div class="col-3">
                     <a href="{{ route('edit_article', ['id' => $article->id]) }}" class="my-btn">
-                        <img src="{{ asset('img/icons/edit.png') }}" class="img-fluid" title="Editer l'article">
+                        <img src="{{ asset('img/icons/edit.svg') }}" class="img-fluid" title="Editer l'article">
                     </a>
                 </div>
             @endauth
@@ -102,40 +98,40 @@
                         </a>
                     </div>
                     <div class="share-button__front">
-                        <p class="share-button__text"> <img src="{{ asset('img/icons/share.png') }}" class="img-fluid"></p>
+                        <p class="share-button__text"> <img src="{{ asset('img/icons/share.svg') }}" class="img-fluid"></p>
                     </div>
                 </div>
 
             </div>
             @auth
             <div class="col-3" data-toggle="modal" data-target="#exampleModal">
-                <img src="{{ asset('img/icons/delete.png') }}" class="img-fluid" >
+                <img src="{{ asset('img/icons/delete.svg') }}" class="img-fluid" >
             </div>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Suppression de l'article {{$article->title}}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Êtes-vous sûr(e) de votre choix ? L'article sera définitivement supprimé.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <form action="{{ route('delete_article', ['id' => $article->id]) }}" method="post">
-                                        {!! method_field('delete') !!}
-                                        {!! csrf_field() !!}
-                                        <button type="submit" class="btn btn-danger">Supprimer</button>
-                                    </form>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Suppression de l'article {{$article->title}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr(e) de votre choix ? L'article sera définitivement supprimé.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <form action="{{ route('delete_article', ['id' => $article->id]) }}" method="post">
+                                {!! method_field('delete') !!}
+                                {!! csrf_field() !!}
+                                <button type="submit" class="btn btn-danger">Supprimer</button>
+                            </form>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
 
-                                </div>
-                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
             @endauth
         </div>
         <div class="card">

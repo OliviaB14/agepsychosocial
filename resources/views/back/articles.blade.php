@@ -58,11 +58,11 @@
                             </p>
                             <p>{{ $article->created_at->toDatestring() }}</p>
                             <a class="btn action-btn" href="{{ route('show_article', [$article->id]) }}">
-                                <img src="{{ asset('img/icons/see.png') }}" class="img-fluid">Voir l'article
+                                <img src="{{ asset('img/icons/see.svg') }}" class="img-fluid">Voir l'article
                             </a>
                             @auth
                                 <a class="action-btn btn" href="{{ route('edit_article', ['id' => $article->id]) }}">
-                                    <img src="{{ asset('img/icons/edit.png') }}" class="img-fluid">Éditer l'article
+                                    <img src="{{ asset('img/icons/edit.svg') }}" class="img-fluid">Éditer l'article
                                 </a>
                                 <form action="{{ route('delete_article', ['id' => $article->id]) }}" class="d-inline-block" method="post">
                                     {!! method_field('delete') !!}
@@ -98,6 +98,6 @@
         return $string;
     } ?>
 
-    <script src="{{asset('js/search_articles.js')}}"></script>
+    <script src="{{asset('js/article_status.js')}}"></script>
 
 @endsection

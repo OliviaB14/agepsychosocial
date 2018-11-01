@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <div class="row mb-3" id="title-row">
-        <div class="col-1 mt-5 pt-3">
+        <div class="col-1 mt-2">
             <img src="{{ asset('img/icons/avatar.svg') }}" alt="Profil">
         </div>
         <h4 class="col-11 h1-responsive">Modifier mes informations</h4>

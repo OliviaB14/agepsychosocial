@@ -39,11 +39,20 @@ class ArticlesController extends Controller
     }
 
     public function create(Request $request){
+        $messages = [
+            // required
+            'title.required' => "Le titre ne peut être vide.",
+            'image.required' => "L'image ne peut être vide.",
+
+            // format
+            'image' => "L'image doit correspondre aux formats suivants: jpeg, png, bmp, gif, ou svg."
+        ];
+
         $request->validate([
             'title' => 'required|string',
-            'text' => 'nullable|string',
-            'main_img' => 'nullable'
-        ]);
+            'text' => 'nullable',
+            'image' => 'nullable|mimes:jpeg,jpg,png,gif'
+        ], $messages);
         $new = new Article();
 
         if($request->title != $new->title){
@@ -64,9 +73,9 @@ class ArticlesController extends Controller
         }
 
         if($request->published == "on"){
-            $new->published = 1;
-        } else{
             $new->published = 0;
+        } else{
+            $new->published = 1;
         }
 
 

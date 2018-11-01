@@ -38,6 +38,7 @@ Route::post('/calcul', 'CalculController@calcul_APS')->name('calcul');
 
 
 
+
 Auth::routes();
 
 /*
@@ -81,5 +82,9 @@ Route::group(['middleware' => ['auth']], function () {
             'Content-Type' => (new finfo(FILEINFO_MIME))->buffer($article->main_img)
         ));
     });
+
+    Route::get('/filemanager', '\UniSharp\LaravelFilemanager\controllers\LfmController@show');
+    Route::post('/filemanager/upload', '\UniSharp\LaravelFilemanager\controllers\UploadController@upload');
+
 
 });
