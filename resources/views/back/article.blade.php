@@ -17,7 +17,7 @@
                 <h3 class="col-12">Éditer l'article : <strong>{{ $article->title }}</strong></h3>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 text-center">
                     <img src="{{ url("article/$article->id/image") }}" class="img-thumbnail">
                     <p class="font-italic">Image actuelle</p>
                 </div>
@@ -141,8 +141,8 @@
             <div class="card">
                 <div class="card-body">
                     <h2>{{ $article->title }}</h2>
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 view text-center">
                             <img src="{{ url("article/$article->id/image") }}">
                         </div>
                         <div class="col-md-6">

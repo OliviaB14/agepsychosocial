@@ -61,15 +61,16 @@ class ArticlesController extends Controller
 
         $new->text = $request->text;
 
-        if(isset($request->image)){
-            $file = $request->file('image');
-
+        if(isset($request->filepath)) {
+            $file = $request->filepath;
             // Get the contents of the file
-            $contents = $file->openFile()->fread($file->getSize());
+            $contents = file_get_contents(URL::to('/').$file);
             $new->main_img = $contents;
+
         } else{
             // Get the contents of the file
-            $new->main_img = asset('default.png');
+            $contents = file_get_contents(URL::to('/')."/img/default.png");
+            $new->main_img = $contents;
         }
 
         if($request->published == "on"){

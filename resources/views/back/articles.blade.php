@@ -29,8 +29,8 @@
             @foreach($articles as $article)
                 <li>
                     <div class="row">
-                        <div class="col-lg-5 col-xl-4">
-                            <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+                        <div class="col-lg-5 col-xl-4 text-center">
+                            <div class="view overlay rounded mb-lg-0 mb-4">
                                 <img src="{{ url("article/$article->id/image") }}" class="img-fluid img-thumbnail">
                                 <a>
                                     <div class="mask rgba-white-slight"></div>
@@ -78,8 +78,5 @@
             @endforeach
         </ul>
     </section>
-
-
-    <script src="{{asset('js/article_status.js')}}"></script>
 
 @endsection

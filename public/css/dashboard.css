@@ -116,3 +116,8 @@ a.btn.action-btn{
     color:black;
     border-radius:100px;
 }
+
+
+.view.overlay img{
+    display: inline-block;
+}

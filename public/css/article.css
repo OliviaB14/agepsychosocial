@@ -125,3 +125,9 @@
 .share-button:hover .share__link:nth-of-type(4){
     transition-delay:0.4s;
 }
+
+
+.view img{
+    display: inline-block;
+    width: 100%;
+}

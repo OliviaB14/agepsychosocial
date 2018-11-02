@@ -33,14 +33,21 @@
             </small>
         </div>
         <div class="form-group">
-            {!! Form::label('image', 'Image principale') !!}
-            {!! Form::file('image', ['class' => 'form-control']); !!}
+            <div class="input-group">
+               <span class="input-group-btn">
+                 <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                   <i class="fa fa-picture-o"></i> Choose
+                 </a>
+               </span>
+                <input id="thumbnail" readonly class="form-control" type="text" name="filepath">
+            </div>
             <small class="form-text text-muted">
                 Taille maximale: Formats acceptés: jpeg, png, bmp, gif, svg.
                 @foreach($errors->get('image') as $message)
                     <span class="text-danger">{{ $message }}</span>
                 @endforeach
             </small>
+            <img id="holder" style="margin-top:15px;max-height:100px;">
         </div>
         <div class="form-group">
             {!! Form::textarea('text', null, ['placeholder' => 'Description du projet']); !!}
@@ -58,6 +65,7 @@
         {!! Form::close() !!}
     </div>
 </div>
-
+<script src="/vendor/laravel-filemanager/js/lfm.js"></script>
 <script src="{{ asset('js/new_article.js') }}"></script>
+
 @endsection
