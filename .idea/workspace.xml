@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6dd375-c855-45bc-87e0-f54416ae8d1d" name="Default" comment="upload articles images corrections (default + file manager)">
-      <change afterPath="$PROJECT_DIR$/public/img/default.png" afterDir="false" />
+    <list default="true" id="1c6dd375-c855-45bc-87e0-f54416ae8d1d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/filter_articles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/article.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/article.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/new_article.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/new_article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/article.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/back/articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/articles.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/new_article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/new_article.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,20 +22,39 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="645">
               <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_article.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/back/new_article.blade.php">
+      <file leaf-file-name="article.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/back/article.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-291">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+            <state relative-caret-position="-149">
+              <caret line="109" column="78" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articles.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/back/articles.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
               <folding>
-                <element signature="e#2384#2425#0#HTML" expanded="true" />
+                <element signature="e#3929#5838#0#HTML" />
+                <element signature="e#4620#4627#1#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/dashboard.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="160" column="23" selection-start-line="160" selection-start-column="23" selection-end-line="160" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -51,15 +64,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>col-sm-10</find>
-      <find>sizeof</find>
       <find>$validatedData</find>
       <find>ProductionController</find>
       <find>/home</find>
@@ -88,6 +99,8 @@
       <find>$e</find>
       <find>lfm</find>
       <find>default.png</find>
+      <find>published</find>
+      <find>action-btn</find>
     </findStrings>
     <replaceStrings>
       <replace>public function</replace>
@@ -101,6 +114,7 @@
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/app</dir>
+      <dir>$PROJECT_DIR$/public/css</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -109,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_06_25_083343_create_articles_table.php" />
         <option value="$PROJECT_DIR$/app/Providers/MacroServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Services/Macros.php" />
@@ -154,12 +167,13 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_11_02_002101_foreign_user_id_cascade.php" />
         <option value="$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/src/config/lfm.php" />
         <option value="$PROJECT_DIR$/public/js/new_article.js" />
-        <option value="$PROJECT_DIR$/resources/views/back/articles.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/dashboard.css" />
         <option value="$PROJECT_DIR$/resources/views/back/article.blade.php" />
         <option value="$PROJECT_DIR$/public/css/article.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" />
         <option value="$PROJECT_DIR$/resources/views/back/new_article.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/filter_articles.js" />
+        <option value="$PROJECT_DIR$/resources/views/back/articles.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/dashboard.css" />
       </list>
     </option>
   </component>
@@ -467,7 +481,8 @@
       <workItem from="1540983020784" duration="25595000" />
       <workItem from="1541062601749" duration="6750000" />
       <workItem from="1541081350773" duration="5749000" />
-      <workItem from="1541118413201" duration="4444000" />
+      <workItem from="1541118413201" duration="5074000" />
+      <workItem from="1541178293331" duration="1256000" />
     </task>
     <task id="LOCAL-00001" summary="implantation formule + navbar">
       <created>1531729629609</created>
@@ -651,36 +666,50 @@
       <option name="project" value="LOCAL" />
       <updated>1541118564149</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="upload articles images corrections (default + file manager)">
+      <created>1541123937325</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1541123937325</updated>
+    </task>
+    <task id="LOCAL-00028" summary="confirm delete on articles page">
+      <created>1541124848516</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1541124848516</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84413000" />
+    <option name="totallyTimeSpent" value="86299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="122" y="168" width="1285" height="598" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32896653" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.29740518" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.29740518" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32896653" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29847145" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30329847" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281787" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32896653" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,8 +719,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="validator for aps calculus" />
-    <MESSAGE value="carousel changes" />
     <MESSAGE value="carousel changes&#10;validation calculus typo" />
     <MESSAGE value="typo creativebloom" />
     <MESSAGE value="slides" />
@@ -715,7 +742,9 @@
     <MESSAGE value="finished article layout for guest" />
     <MESSAGE value="error handling 1" />
     <MESSAGE value="error handling 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="error handling 2" />
+    <MESSAGE value="upload articles images corrections (default + file manager)" />
+    <MESSAGE value="confirm delete on articles page" />
+    <option name="LAST_COMMIT_MESSAGE" value="confirm delete on articles page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -723,7 +752,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/article_status.js" />
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -944,26 +972,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="e#46#60#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_11_02_002101_foreign_user_id_cascade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_11_02_002101_foreign_user_id_cascade.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_25_083343_create_articles_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-109" />
@@ -1003,11 +1015,7 @@
     <entry file="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/docs/integration.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor>
-            <folding>
-              <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
-            </folding>
-          </first_editor>
+          <first_editor />
           <second_editor />
         </state>
       </provider>
@@ -1024,9 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="72" column="39" lean-forward="true" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
-          <folding>
-            <element signature="e#52#80#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,34 +1042,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/back/article.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/back/new_article.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
+        <state relative-caret-position="-291">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/dashboard.css">
+    <entry file="file://$PROJECT_DIR$/public/js/filter_articles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="121" column="26" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
+        <state relative-caret-position="275">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/back/article.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
+          <caret line="109" column="78" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/back/articles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        <state relative-caret-position="126">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding>
+            <element signature="e#3929#5838#0#HTML" />
+            <element signature="e#4620#4627#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/back/new_article.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/css/dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding>
-            <element signature="e#2384#2425#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="160" column="23" selection-start-line="160" selection-start-column="23" selection-end-line="160" selection-end-column="23" />
         </state>
       </provider>
     </entry>
