@@ -63,13 +63,35 @@
                                 <a class="action-btn btn" href="{{ route('edit_article', ['id' => $article->id]) }}">
                                     <img src="{{ asset('img/icons/edit.svg') }}" class="img-fluid">Éditer l'article
                                 </a>
-                                <form action="{{ route('delete_article', ['id' => $article->id]) }}" class="d-inline-block" method="post">
-                                    {!! method_field('delete') !!}
-                                    {!! csrf_field() !!}
-                                    <button class="action-btn btn p-3" href="{{ route('delete_article', ['id' => $article->id]) }}">
-                                        <img src="{{ asset('img/icons/delete.svg') }}" class="img-fluid">Supprimer l'article
-                                    </button>
-                                </form>
+                                <a class="action-btn btn p-3" data-toggle="modal" data-target="#exampleModal">
+                                    <img src="{{ asset('img/icons/delete.svg') }}" class="img-fluid">Supprimer l'article
+                                </a>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Suppression de l'article {{$article->title}}</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Êtes-vous sûr(e) de votre choix ? L'article sera définitivement supprimé.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="{{ route('delete_article', ['id' => $article->id]) }}" method="post">
+                                                    {!! method_field('delete') !!}
+                                                    {!! csrf_field() !!}
+                                                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                                                </form>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             @endauth
                         </div>
                     </div>
