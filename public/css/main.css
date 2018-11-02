@@ -8,8 +8,6 @@ body{
 }
 .navbar .ml-auto a{
     text-decoration: none;
-    color: #b01611;
-    font-weight: bold;
     font-family: 'Roboto Condensed', 'Arial', sans-serif;
 }
 main{
@@ -42,6 +40,9 @@ main{
 #aps-button{
     text-transform: uppercase;
     font-size:100%;
+    color: #b01611;
+    font-weight: bold;
+
 }
 #aps-button:hover{
     background:#b01611;
