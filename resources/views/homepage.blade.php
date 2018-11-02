@@ -5,24 +5,13 @@
 @endsection
 
 @section('css-links')
-<style>
-.carousel, .carousel-item {
-  height: 600px !important;
-}
-
-.carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /*min-height: 600px;*/
-}
-</style>
+<link rel="stylesheet" href="{{ asset('css/main.css') }}">
 @endsection
 
 @section('content')
 <div class="row">
     <div class="col">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="{{ asset('img/slide1.jpg') }}" alt="First slide">
@@ -47,10 +36,6 @@
             </a>
         </div>
     </div>
-</div>
-
-<div class="row">
-
 </div>
 
 
