@@ -45,45 +45,49 @@
     <main class="py-0">
         <div class="container-fluid">
             <div class="row">
-                <div class="sidebar col-1">
-                    <p class="text-center font-weight-bold">{{ $user->first_name }}, vous êtes connecté(e).</p>
+                <div class="sidebar col-md-1">
+                    <div class="row">
+                        <p class="text-center font-weight-bold col-12">{{ $user->first_name }}, vous êtes connecté(e).</p>
+                    </div>
 
-                    <ul class="nav flex-column grey lighten-4 py-4">
-                        <li class="nav-item">
-                            <a href="{{ route('home') }}" class="nav-link">
-                                <img src="{{ asset('img/icons/see.svg') }}" alt="Voir le site">
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('dashboard') }}">
-                                <img src="{{ asset('img/icons/avatar.svg') }}" alt="Profil">
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('create_article') }}">
-                                <img src="{{ asset('img/icons/edit.svg') }}" alt="Éditer le profil">
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('show_articles') }}">
-                                <img src="{{ asset('img/icons/articles.svg') }}" alt="Tous les articles">
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://creativebloom.fr" target="_blank">
-                                <img src="{{ asset('img/icons/help.svg') }}" alt="Contacter creativebloom.fr">
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <img src="{{ asset('img/icons/logout.svg') }}" alt="Déconnexion">
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                        </li>
+                    <ul class="nav flex-column grey lighten-4 py-4 col-12">
+                        <div class="row">
+                            <li class="nav-item col-md-12 col-sm-2 col-2">
+                                <a href="{{ route('home') }}" class="nav-link">
+                                    <img src="{{ asset('img/icons/see.svg') }}" alt="Voir le site">
+                                </a>
+                            </li>
+                            <li class="nav-item col-md-12 col-sm-2 col-2">
+                                <a class="nav-link" href="{{ route('dashboard') }}">
+                                    <img src="{{ asset('img/icons/avatar.svg') }}" alt="Profil">
+                                </a>
+                            </li>
+                            <li class="nav-item col-md-12 col-sm-2 col-2">
+                                <a class="nav-link" href="{{ route('create_article') }}">
+                                    <img src="{{ asset('img/icons/edit.svg') }}" alt="Éditer le profil">
+                                </a>
+                            </li>
+                            <li class="nav-item col-md-12 col-sm-2 col-2">
+                                <a class="nav-link" href="{{ route('show_articles') }}">
+                                    <img src="{{ asset('img/icons/articles.svg') }}" alt="Tous les articles">
+                                </a>
+                            </li>
+                            <li class="nav-item col-md-12 col-sm-2 col-2">
+                                <a class="nav-link" href="http://creativebloom.fr" target="_blank">
+                                    <img src="{{ asset('img/icons/help.svg') }}" alt="Contacter creativebloom.fr">
+                                </a>
+                            </li>
+                            <li class="nav-item col-md-12 col-sm-2 col-2">
+                                <a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <img src="{{ asset('img/icons/logout.svg') }}" alt="Déconnexion">
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                            </li>
+                        </div>
+                        
                     </ul>
                 </div>
-                <div class="col-11">
+                <div class="col-md-11">
                     @yield('content')
                 </div>
             </div>

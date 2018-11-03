@@ -1,7 +1,27 @@
+*{
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+}
 body{
     background: #fff;
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
+h1{
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+h2{
+    font-size: calc(15px + 6 * ((100vw - 320px) / 680));
+}
+h3{
+    font-size: calc(13px + 6 * ((100vw - 320px) / 680));
+}
+h4{
+    font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+}
+p{
+    font-size: calc(8px + 6 * ((100vw - 320px) / 680));
+}
+
 .navbar-brand{
     text-transform: uppercase;
     font-weight: bold;
@@ -13,6 +33,11 @@ body{
 main{
     height: 85vh;
     overflow-y: scroll;
+}
+@media (max-width: 767.98px) {
+    .sidebar{
+        height: 20vh !important;
+    }
 }
 
 /*.carousel, .carousel-item {
