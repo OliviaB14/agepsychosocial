@@ -80,7 +80,9 @@ Route::group(['middleware' => ['auth']], function () {
     /*
      * user update
      */
-    Route::post('/user/update/{id}', 'DashboardController@update');
+    Route::post('/user/{id}/update', 'DashboardController@update')->name('update_user');
+
+    Route::post('/user/{id}/password', 'DashboardController@changePassword')->name('update_user_password');
 
     /*
      * articles
