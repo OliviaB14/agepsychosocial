@@ -57,7 +57,7 @@
                 <div class="block">
                     <input data-index="0" id="published" name="published" type="checkbox" />
                     <label for="published" id="status"></label>
-                    <span class="text">Article à publier</span>
+                    <span class="text">Article à sauvegarder</span>
                 </div>
             </div>
         </div>

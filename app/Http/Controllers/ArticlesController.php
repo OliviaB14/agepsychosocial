@@ -74,9 +74,9 @@ class ArticlesController extends Controller
         }
 
         if($request->published == "on"){
-            $new->published = 0;
-        } else{
             $new->published = 1;
+        } else{
+            $new->published = 0;
         }
 
 
