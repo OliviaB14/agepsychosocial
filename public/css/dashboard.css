@@ -12,11 +12,11 @@ main{
 
 
 
-input{
+#myInput{
     width:100%;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
 
     border: 1px solid #e8e1e1;
 
@@ -28,10 +28,20 @@ h4{
 }
 
 .main-row{
-    background: #2e78c1;
+    background: #20354a;
     padding: 2%;
     color: #fff;
     box-shadow: 1px 1px 11px 0px grey;
+}
+
+.article{
+    margin: 0;
+}
+
+.article [class*="col-"]{
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .filterDiv {
@@ -68,10 +78,13 @@ h4{
 }
 
 .action-btn{
-    border:1px solid black;
-    padding: 2%;
+    border:1px solid #c1bdbd;
+    /*padding: 2%;*/
     color: black;
     background: #fff;
+    font-size: 10px;
+    -ms-word-wrap: normal !important;
+    word-wrap: normal !important;
 }
 a.btn.action-btn{
     color:black;
@@ -82,10 +95,12 @@ a.btn.action-btn{
 }
 .filterDiv h3{
     font-family: 'Helvetica Neue', sans-serif;
+    background: #d5e2e6;
 }
 .article_date{
     font-style: italic;
     color: #9f9f9f;
+    background-color: #d5e2e6;
 }
 
 .status{
@@ -93,11 +108,12 @@ a.btn.action-btn{
     font-weight: bold;
 }
 
-.status .published, .btn.published{
+.status_published, .btn.published {
     background: #62a730;
 }
-.status .draft, .btn.draft{
-    background: #ff9f35;
+.status_draft, .btn.draft{
+    background: #dedcd9;
+    color: #000;
 }
 
 .wrap input{
@@ -165,3 +181,8 @@ a.btn.action-btn{
     border: 2px dotted black;
 }
 
+
+
+.admin-buttons .row {
+    margin: 0;
+}

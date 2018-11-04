@@ -17,9 +17,11 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <h4>Créer un article</h4>
-</div>
+    <div class="row main-row mb-3">
+        <h4 class="h1-responsive font-weight-bold text-center col-6">
+            Créer un article
+        </h4>
+    </div>
 <div class="row justify-content-center">
     <div class="mt-3 col-md-8">
         {!! Form::open(['url' => '/articles/new', 'files' => true]) !!}
