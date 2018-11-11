@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1c6dd375-c855-45bc-87e0-f54416ae8d1d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/back/articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/articles.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/new_article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/new_article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,31 +31,13 @@
       <file leaf-file-name="articles.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/back/articles.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="74" column="67" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
+            <state relative-caret-position="200">
+              <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
               <folding>
-                <element signature="e#5355#5362#1#HTML" expanded="true" />
+                <element signature="e#215#683#0#HTML" />
+                <element signature="e#725#1173#0#HTML" />
+                <element signature="e#1210#5581#0#HTML" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/dashboard.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticlesController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -127,8 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bootstrap/cache/config.php" />
-        <option value="$PROJECT_DIR$/public/css/new_article.css" />
         <option value="$PROJECT_DIR$/database/migrations/2018_10_31_191306_modify_article_text_length.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_10_31_192726_modify_main_img_length.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
@@ -147,7 +126,6 @@
         <option value="$PROJECT_DIR$/resources/views/pages/productions.blade.php" />
         <option value="$PROJECT_DIR$/public/css/productions.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CalculController.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/homepage.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/calcul.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/article.blade.php" />
@@ -167,17 +145,20 @@
         <option value="$PROJECT_DIR$/public/css/article.css" />
         <option value="$PROJECT_DIR$/public/js/filter_articles.js" />
         <option value="$PROJECT_DIR$/resources/views/back/change_password.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/back/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/back.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" />
         <option value="$PROJECT_DIR$/public/js/new_article.js" />
         <option value="$PROJECT_DIR$/routes/console.php" />
         <option value="$PROJECT_DIR$/resources/views/back/new_article.blade.php" />
         <option value="$PROJECT_DIR$/public/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/resources/views/includes/head.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/back.css" />
+        <option value="$PROJECT_DIR$/resources/views/back/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/back.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/back/articles.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" />
       </list>
     </option>
   </component>
@@ -276,8 +257,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="319" />
-    <option name="y" value="23" />
+    <option name="x" value="192" />
+    <option name="y" value="58" />
     <option name="width" value="1121" />
     <option name="height" value="743" />
   </component>
@@ -289,7 +270,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -349,12 +329,6 @@
               <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
               <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
@@ -423,6 +397,13 @@
               <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agepsychosocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agepsychosocial" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -458,6 +439,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -517,6 +499,8 @@
       <workItem from="1541178293331" duration="1575000" />
       <workItem from="1541259024455" duration="7325000" />
       <workItem from="1541329928101" duration="2058000" />
+      <workItem from="1541360324996" duration="104000" />
+      <workItem from="1541954311661" duration="3214000" />
     </task>
     <task id="LOCAL-00001" summary="implantation formule + navbar">
       <created>1531729629609</created>
@@ -742,28 +726,41 @@
       <option name="project" value="LOCAL" />
       <updated>1541268333255</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="design">
+      <created>1541360387528</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1541360387528</updated>
+    </task>
+    <task id="LOCAL-00034" summary="font awesome + layout simplification">
+      <created>1541958267071</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1541958267071</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96001000" />
+    <option name="totallyTimeSpent" value="99319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="319" y="23" width="1121" height="743" extended-state="0" />
-    <editor active="true" />
+    <frame x="192" y="58" width="1121" height="743" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17238183" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17794254" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2972136" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.2972136" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32896653" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -781,8 +778,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aps-calcul" />
-    <MESSAGE value="carousel slides change" />
     <MESSAGE value="carousel slides made automatic" />
     <MESSAGE value="profile and settings images" />
     <MESSAGE value="create articles + layout" />
@@ -806,7 +801,9 @@
     <MESSAGE value="change_password function" />
     <MESSAGE value="back-end sidebar : responsive" />
     <MESSAGE value="article status correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="article status correction" />
+    <MESSAGE value="design" />
+    <MESSAGE value="font awesome + layout simplification" />
+    <option name="LAST_COMMIT_MESSAGE" value="font awesome + layout simplification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -814,20 +811,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/pages_article.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalculController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2670">
@@ -881,13 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
           <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="35" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1072,20 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/back.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="89" column="39" lean-forward="true" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/back/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="81" column="54" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/new_article.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1114,17 +1076,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/back/new_article.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/back.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1137,12 +1113,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/back.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="103" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/back/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="52" column="85" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/back/articles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="74" column="67" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
+        <state relative-caret-position="200">
+          <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
           <folding>
-            <element signature="e#5355#5362#1#HTML" expanded="true" />
+            <element signature="e#215#683#0#HTML" />
+            <element signature="e#725#1173#0#HTML" />
+            <element signature="e#1210#5581#0#HTML" />
           </folding>
         </state>
       </provider>

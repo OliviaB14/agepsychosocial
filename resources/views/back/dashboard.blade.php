@@ -28,32 +28,34 @@
     @endisset
 
     <div class="row mt-5 justify-content-center">
-        <div class="col-8 card">
+        <div class="col-md-8 card">
             <div class="card-body">
                 {!! Form::model($user, ['route' => ['update_user', $user->id]]) !!}
                 <div class="form-group row justify-content-center">
                     {!! Form::label('first_name', 'Prénom', ['class' => 'col-3']) !!}
                     <div class="col-6">
-                        {!! Form::text('first_name') !!}
+                        {!! Form::text('first_name', null, ['class' => 'form-control']) !!}
                     </div>
                 </div>
                 <div class="form-group row justify-content-center">
                     {!!  Form::label('last_name', 'Nom', ['class' => 'col-3']) !!}
                     <div class="col-6">
-                        {!!  Form::text('last_name') !!}
+                        {!!  Form::text('last_name', null, ['class' => 'form-control']) !!}
                     </div>
                 </div>
                 <div class="form-group row justify-content-center">
                     {!!  Form::label('email', 'Adresse e-mail', ['class' => 'col-3']) !!}
                     <div class="col-6">
-                        {!!  Form::text('email') !!}
+                        {!!  Form::text('email', null, ['class' => 'form-control']) !!}
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <a class="action-btn btn mt-5" data-toggle="modal" data-target="#basicExampleModal">Changer de mot de passe</a>
-                </div>
                 <div class="form-group row mt-5 justify-content-center">
-                    {!! Form::submit('Modifier', ['class' => 'btn btn-success col-6']) !!}
+                    {!! Form::submit('Modifier', ['class' => 'btn btn-success col-md-6']) !!}
+                </div>
+                <div class="row justify-content-center">
+                    <a class="btn-flat mt-5" data-toggle="modal" data-target="#basicExampleModal">
+                        <i class="text-info fa fa-user-lock mr-4"></i>Changer de mot de passe
+                    </a>
                 </div>
                 {!! Form::close() !!}
             </div>
@@ -81,13 +83,13 @@
                         <div class="form-group row justify-content-center">
                             {!!  Form::label('password', 'Nouveau mot de passe', ['class' => 'col-3']) !!}
                             <div class="col-6">
-                                {!! Form::password('password') !!}
+                                {!! Form::password('password', null, ['class' => 'form-control']) !!}
                             </div>
                         </div>
                         <div class="form-group row justify-content-center">
                             {!!  Form::label('password_confirmation', 'Confirmer le nouveau mot de passe', ['class' => 'col-3']) !!}
                             <div class="col-6">
-                                {!! Form::password('password_confirmation') !!}
+                                {!! Form::password('password_confirmation', null, ['class' => 'form-control']) !!}
                             </div>
                         </div>
                     </div>

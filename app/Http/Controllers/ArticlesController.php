@@ -23,7 +23,7 @@ class ArticlesController extends Controller
     }
 
     public function index(){
-        $articles = Article::all();
+        $articles = Article::paginate(10);
         $user = Auth::user();
         return view('back.articles', [
             'articles' => $articles,
@@ -89,7 +89,7 @@ class ArticlesController extends Controller
     }
 
     public function update($id, Request $request){
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
 
         $article->title = $request->title;
         $article->text = $request->text;
@@ -106,7 +106,7 @@ class ArticlesController extends Controller
 
     public function show($id){
         $user = Auth::user();
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
         return view('back.article', [
             'article' => $article,
             'user' => $user,
@@ -117,7 +117,7 @@ class ArticlesController extends Controller
 
     public function show_edit($id){
         $user = Auth::user();
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
         return view('back.article', [
             'article' => $article,
             'user' => $user,
@@ -127,7 +127,7 @@ class ArticlesController extends Controller
     }
 
     public function delete($id){
-        $to_delete = Article::find($id);
+        $to_delete = Article::findOrFail($id);
         $to_delete->delete();
         return redirect(route('show_articles'));
     }
