@@ -8,38 +8,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
 
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.3/js/mdb.min.js"></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-
+    @include('includes.head')
     @yield('css-links')
-
-
-
+    <link rel="stylesheet" href="{{ asset('css/back.css') }}">
 </head>
+
 <body>
+
 <div id="app">
     @include('includes.navbar')
     <main class="py-0">
@@ -51,34 +28,34 @@
                     </div>
 
                     <ul class="nav flex-column grey lighten-4 py-4 col-12">
-                        <div class="row">
+                        <div class="row justify-content-center text-center">
                             <li class="nav-item col-md-12 col-sm-2 col-2">
-                                <a href="{{ route('home') }}" class="nav-link">
+                                <a href="{{ route('home') }}" class="nav-link" data-tooltip="Voir le site" data-position="right" class="right">
                                     <img src="{{ asset('img/icons/see.svg') }}" alt="Voir le site">
                                 </a>
                             </li>
                             <li class="nav-item col-md-12 col-sm-2 col-2">
-                                <a class="nav-link" href="{{ route('dashboard') }}">
+                                <a class="nav-link" href="{{ route('dashboard') }}" data-tooltip="Profil" data-position="right" class="right">
                                     <img src="{{ asset('img/icons/avatar.svg') }}" alt="Profil">
                                 </a>
                             </li>
                             <li class="nav-item col-md-12 col-sm-2 col-2">
-                                <a class="nav-link" href="{{ route('create_article') }}">
-                                    <img src="{{ asset('img/icons/edit.svg') }}" alt="Éditer le profil">
+                                <a class="nav-link" href="{{ route('create_article') }}" data-tooltip="Écrire un article" data-position="right" class="right">
+                                    <img src="{{ asset('img/icons/edit.svg') }}" alt="Écrire un article">
                                 </a>
                             </li>
                             <li class="nav-item col-md-12 col-sm-2 col-2">
-                                <a class="nav-link" href="{{ route('show_articles') }}">
+                                <a class="nav-link" href="{{ route('show_articles') }}" data-tooltip="Tous les articles" data-position="right" class="right">
                                     <img src="{{ asset('img/icons/articles.svg') }}" alt="Tous les articles">
                                 </a>
                             </li>
                             <li class="nav-item col-md-12 col-sm-2 col-2">
-                                <a class="nav-link" href="http://creativebloom.fr" target="_blank">
+                                <a class="nav-link" href="http://creativebloom.fr" target="_blank" data-tooltip="creativebloom.fr" data-position="right" class="right">
                                     <img src="{{ asset('img/icons/help.svg') }}" alt="Contacter creativebloom.fr">
                                 </a>
                             </li>
                             <li class="nav-item col-md-12 col-sm-2 col-2">
-                                <a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" data-tooltip="Déconnexion" data-position="right" class="right">
                                     <img src="{{ asset('img/icons/logout.svg') }}" alt="Déconnexion">
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
