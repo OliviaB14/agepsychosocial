@@ -27,6 +27,10 @@ Route::get('/interpretation-et-limites', 'PresentationController@interpretation'
 Route::get('/formule', 'PresentationController@formule')->name('formule');
 Route::get('/productions-scientifiques', 'ProductionsController@index')->name('productions');
 
+
+Route::get('/aps/article/{id}', 'ProductionsController@show')->name("guest_article");
+
+
 /*
  *
  * calcul pages
@@ -44,18 +48,6 @@ Route::get('article/{id}/image', function ($id) {
     return response()->make($article->main_img, 200, array(
         'Content-Type' => (new finfo(FILEINFO_MIME))->buffer($article->main_img)
     ));
-});
-
-
-
-
-/*
- *
- * Guest pages
- *
- */
-Route::group(['middleware' => ['guest']], function () {
-    Route::get('/aps/article/{id}', 'ProductionsController@show')->name("guest_article");
 });
 
 

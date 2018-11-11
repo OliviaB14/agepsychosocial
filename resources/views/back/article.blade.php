@@ -39,8 +39,8 @@
                         <div class="wrap">
                             <div class="block">
                                 <input data-index="0" id="published" name="published" type="checkbox" />
-                                <label for="published"></label>
-                                <span>Publier l'article</span>
+                                <label for="published" id="status"></label>
+                                <span class="text">Article à sauvegarder</span>
                             </div>
                         </div>
                     </div>
@@ -140,12 +140,12 @@
         <div class="article">
             <div class="card">
                 <div class="card-body">
-                    <h2>{{ $article->title }}</h2>
+                    <h1>{{ $article->title }}</h1>
                     <div class="row justify-content-center">
                         <div class="col-md-6 view text-center">
                             <img src="{{ url("article/$article->id/image") }}">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 p-2 view-content">
                             <?php echo html_entity_decode($article->text);?>
                         </div>
                     </div>
@@ -153,4 +153,6 @@
             </div>
         </div>
     @endif
+    <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
+    <script src="{{ asset('js/new_article.js') }}"></script>
 @endsection

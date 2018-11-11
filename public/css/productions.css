@@ -1,20 +1,13 @@
 input{
     width:100%;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
 
     border: 1px solid #e8e1e1;
 
     padding: 2%;
 }
 
-h4{
-    margin: 2% auto;
-}
-
 .main-row{
-    background: #2e78c1;
+    background: #20354a;
     padding: 2%;
     color: #fff;
     box-shadow: 1px 1px 11px 0px grey;
@@ -37,9 +30,17 @@ h4{
 }
 
 h1.h1_item {
-    background: #f4f0f7;
-    border-radius: 20px;
-    font-size: 3vw;
+    background: #20354a;
     text-align: center;
     text-transform: none;
+    color: #e2e1e1;
 }
+
+
+h2{ font-size: 2.8em; line-height: 1.1; }
+h3{ font-size: 2em; }
+h4{ font-size: 1.2em; }
+h5{ font-size: 1.1em; }
+h6{ font-size: .9em; letter-spacing: 1px; }
+
+.post-style-2 .blog-info{ width: 50%; float: left; height: 100%; position: relative; padding: 30px; padding-bottom: 45px; }

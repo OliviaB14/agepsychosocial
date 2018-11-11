@@ -186,3 +186,9 @@ a.btn.action-btn{
 .admin-buttons .row {
     margin: 0;
 }
+
+
+#articles-list{
+    height: 80vh;
+    overflow-y: scroll;
+}

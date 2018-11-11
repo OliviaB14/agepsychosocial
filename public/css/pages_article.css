@@ -4,7 +4,7 @@
 }
 
 .main-row{
-    background: #2e78c1;
+    background: #20354a;
     padding: 2%;
     color: #fff;
     box-shadow: 1px 1px 11px 0px grey;
@@ -17,4 +17,9 @@
     font-family: 'Roboto Condensed', 'Arial', sans-serif;
     font-size: larger;
 
+}
+
+#article-row img{
+    float: left;
+    margin: 0 2% 2% 0;
 }

@@ -4,6 +4,7 @@
 
 @section('css-links')
     <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/back.css') }}">
 @endsection
 
 @section('content')
@@ -37,48 +38,44 @@
             <li class="filterDiv col-12 {{ $article->published ? 'published' : 'draft' }}">
                 <div class="row">
                     <div class="col-4 col-md-6 col-lg-5 col-xl-4 text-center">
-                        <div class="view overlay rounded mb-lg-0">
-                            <img src="{{ url("article/$article->id/image") }}" class="img-fluid img-thumbnail">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
+                        <div class="view overlay rounded mb-lg-0 row">
+                            <div class="col-md-12">
+                                <img src="{{ url("article/$article->id/image") }}" class="img-fluid img-thumbnail">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="row justify-content-centerd">
+                            <div class="col-md-4">
+                                <a class="btn action-btn btn-sm btn-block info-color" href="{{ route('show_article', [$article->id]) }}" data-tooltip="Voir l'article" data-position="right" class="right">
+                                    <i class="far fa-2x fa-eye text-white"></i>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn action-btn btn-sm btn-block default-color" href="{{ route('edit_article', ['id' => $article->id]) }}" data-tooltip="Éditer l'article" data-position="right" class="right">
+                                    <i class="fas fa-2x fa-pen text-white"></i>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn action-btn btn-sm btn-block danger-color" data-toggle="modal" data-target="#exampleModal" data-tooltip="Supprimer l'article" data-position="right" class="right">
+                                    <i class="fas fa-2x fa-trash-alt text-white"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-8 col-md-6 col-lg-7 col-xl-8 article">
                         <div class="row h-100">
-                            <div class="col-md-3 admin-buttons">
-                                <div class="row">
-                                    <div class="row justify-content-centerd">
-                                        <div class="col-md-12">
-                                            <a class="btn action-btn btn-sm" href="{{ route('show_article', [$article->id]) }}">
-                                                <img src="{{ asset('img/icons/see.svg') }}" class="img-fluid">
-                                                Voir l'article
-                                            </a>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <a class="btn action-btn btn-sm" href="{{ route('edit_article', ['id' => $article->id]) }}">
-                                                <img src="{{ asset('img/icons/edit.svg') }}" class="img-fluid">
-                                                Éditer l'article
-                                            </a>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <a class="btn action-btn btn-sm" data-toggle="modal" data-target="#exampleModal">
-                                                <img src="{{ asset('img/icons/delete.svg') }}" class="img-fluid">
-                                                Supprimer l'article
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
+                            <div class="col-md-12">
                                 <div class="row text-center">
-                                    <div class="status col-md-2 align-middle {{ $article->published ? 'status_published' : 'status_draft' }}">
+                                    <div class="status col-md-3 align-middle {{ $article->published ? 'status_published' : 'status_draft' }}">
                                         <span>{{ $article->published ? 'Publié' : 'Brouillon' }}</span>
                                     </div>
                                     <h3 class="font-weight-bold col-6 col-sm-6 col-md-6"><strong>{{ $article->title }}</strong></h3>
                                     <p class="col-6 col-sm-6 col-md-3 article_date">{{ $article->created_at->toDatestring() }}</p>
                                 </div>
-                                <div class="row article-content ">
+                                <div class="row article-content">
                                     <div class="col-md-12 dark-grey-text my-3 text-center">
                                         @isset($article->text)
                                             <?php

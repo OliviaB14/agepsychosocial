@@ -3,6 +3,14 @@
     height: auto;
 }
 
+.view-content h1, .view-content h2{
+    font-family: 'Source Code Pro', sans-serif;
+    font-weight: bold;
+    padding-left: 1%;
+    border-left: 3px solid rgba(0, 0, 0, 1);
+    letter-spacing: 1px;
+}
+
 
 .share__icon {
     width: 32px;

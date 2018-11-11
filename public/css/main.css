@@ -22,13 +22,17 @@ p{
     font-size: calc(8px + 6 * ((100vw - 320px) / 680));
 }
 
+a{
+    text-decoration: none;
+    color: #000;
+}
+
 .navbar-brand{
     text-transform: uppercase;
     font-weight: bold;
 }
 .navbar .ml-auto a{
     text-decoration: none;
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
 }
 main{
     height: 85vh;
@@ -40,16 +44,6 @@ main{
     }
 }
 
-/*.carousel, .carousel-item {
-    height: 600px !important;
-}
-
-.carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    !*min-height: 600px;*!
-}*/
 
 .sidebar{
     background:#021F29;

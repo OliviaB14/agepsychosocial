@@ -100,6 +100,11 @@ class ArticlesController extends Controller
             $contents = $file->openFile()->fread($file->getSize());
             $article->main_img = $contents;
         }
+        if($request->published == "on"){
+            $article->published = 1;
+        } else{
+            $article->published = 0;
+        }
         $article->save();
         return redirect(route('show_articles'));
     }

@@ -9,33 +9,37 @@
 @endsection
 
 @section('content')
-<div class="row article-settings text-center justify-content-center p-4">
-    <div class="col-3 pt-2 btn" id="go_back">
-        <a href="{{ route('productions') }}"><p>Retour aux articles</p></a>
+<div class="article">
+    <div class="row justify-content-center text-center main-row">
+        <h2 class="col-md-8">{{ $article->title }}, {{ $article->formatted_date }}</h2>
     </div>
-    <div class="col-3">
-        <div class="share-button">
-            <div class="share-button__back">
-                <a class="share__link" href="https://twitter.com/share?url={{$url}}" title="twitter">
-                    <svg class="share__icon share__icon--twitter" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.652px" height="49.652px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
+    <div class="row article-settings text-center justify-content-center p-4">
+        <div class="col-3 pt-2 btn" id="go_back">
+            <a href="{{ route('productions') }}"><i class="fas fa-arrow-left mr-2"></i><span>Retour aux articles</span></a>
+        </div>
+        <div class="col-3">
+            <div class="share-button">
+                <div class="share-button__back">
+                    <a class="share__link" href="https://twitter.com/share?url={{$url}}" title="twitter">
+                        <svg class="share__icon share__icon--twitter" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.652px" height="49.652px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
                         <g>
                             <g>
                                 <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826    C49.652,11.137,38.516,0,24.826,0z M35.901,19.144c0.011,0.246,0.017,0.494,0.017,0.742c0,7.551-5.746,16.255-16.259,16.255    c-3.227,0-6.231-0.943-8.759-2.565c0.447,0.053,0.902,0.08,1.363,0.08c2.678,0,5.141-0.914,7.097-2.446    c-2.5-0.046-4.611-1.698-5.338-3.969c0.348,0.066,0.707,0.103,1.074,0.103c0.521,0,1.027-0.068,1.506-0.199    c-2.614-0.524-4.583-2.833-4.583-5.603c0-0.024,0-0.049,0.001-0.072c0.77,0.427,1.651,0.685,2.587,0.714    c-1.532-1.023-2.541-2.773-2.541-4.755c0-1.048,0.281-2.03,0.773-2.874c2.817,3.458,7.029,5.732,11.777,5.972    c-0.098-0.419-0.147-0.854-0.147-1.303c0-3.155,2.558-5.714,5.713-5.714c1.644,0,3.127,0.694,4.171,1.804    c1.303-0.256,2.523-0.73,3.63-1.387c-0.43,1.335-1.333,2.454-2.516,3.162c1.157-0.138,2.261-0.444,3.282-0.899    C37.987,17.334,37.018,18.341,35.901,19.144z"></path>
                             </g>
                         </g>
                     </svg>
-                </a>
-                <a class="share__link " href="http://www.facebook.com/sharer.php?u={{$url}}" title="facebook">
-                    <svg class="share__icon share__icon--facebook" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.652px" height="49.652px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
+                    </a>
+                    <a class="share__link " href="http://www.facebook.com/sharer.php?u={{$url}}" title="facebook">
+                        <svg class="share__icon share__icon--facebook" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.652px" height="49.652px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
                         <g>
                             <g>
                                 <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826    C49.652,11.137,38.516,0,24.826,0z M31,25.7h-4.039c0,6.453,0,14.396,0,14.396h-5.985c0,0,0-7.866,0-14.396h-2.845v-5.088h2.845    v-3.291c0-2.357,1.12-6.04,6.04-6.04l4.435,0.017v4.939c0,0-2.695,0-3.219,0c-0.524,0-1.269,0.262-1.269,1.386v2.99h4.56L31,25.7z    "></path>
                             </g>
                         </g>
                     </svg>
-                </a>
-                <a class="share__link" href="https://plus.google.com/share?url={{$url}}">
-                    <svg class="share__icon share__icon--google" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.652px" height="49.652px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
+                    </a>
+                    <a class="share__link" href="https://plus.google.com/share?url={{$url}}">
+                        <svg class="share__icon share__icon--google" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.652px" height="49.652px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
                         <g>
                             <g>
                                 <g>
@@ -46,33 +50,29 @@
                             </g>
                         </g>
                     </svg>
-                </a>
-                <a class="share__link" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{$url}}" title="linkedin">
-                    <svg height="67px" class="share__icon share__icon--linkedin" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    </a>
+                    <a class="share__link" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{$url}}" title="linkedin">
+                        <svg height="67px" class="share__icon share__icon--linkedin" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <path d="M49.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H49.837z M21.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H21.959z M33,64  C16.432,64,3,50.568,3,34C3,17.431,16.432,4,33,4s30,13.431,30,30C63,50.568,49.568,64,33,64z M25.354,48.137V27.71h-6.789v20.427  H25.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFF;"/>
                     </svg>
-                </a>
-            </div>
-            <div class="share-button__front">
-                <p class="share-button__text"> <img src="{{ asset('img/icons/share.svg') }}" class="img-fluid"></p>
+                    </a>
+                </div>
+                <div class="share-button__front">
+                    <p class="share-button__text"> <img src="{{ asset('img/icons/share.svg') }}" class="img-fluid"></p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="article">
-    <div class="row justify-content-center text-center main-row">
-        <h2 class="col-md-8">{{ $article->title }}</h2>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-9">
-            <img src="{{ url("article/$article->id/image") }}">
-        </div>
-    </div>
-    <div class="row justify-content-center">
+    <hr class="py-2">
+
+
+    <div class="row justify-content-center" id="article-row">
         <div class="col-md-9 py-4">
+            <img src="{{ url("article/$article->id/image") }}">
             <?php echo html_entity_decode($article->text); ?>
         </div>
     </div>
+    <hr class="py-2">
 </div>
 <div class="row article-settings text-center justify-content-center p-4">
     <div class="col-3">
