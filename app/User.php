@@ -29,6 +29,11 @@ class User extends Authenticatable
 
     public function articles()
     {
-        return $this->hasMany('App\Article');
+        return $this->hasMany('AgePsychoSocial\Article');
+    }
+
+    public function role()
+    {
+        return $this->belongsTo('AgePsychoSocial\Role');
     }
 }

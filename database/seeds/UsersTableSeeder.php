@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
             'last_name' => "Boumokonia",
             'email' => "olivia@creativebloom.fr",
             'password' => bcrypt('secret'),
+            'role_id' => '1'
         ]);
     }
 }
