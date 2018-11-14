@@ -73,7 +73,7 @@
                                         <span>{{ $article->published ? 'Publié' : 'Brouillon' }}</span>
                                     </div>
                                     <h3 class="font-weight-bold col-6 col-sm-6 col-md-6"><strong>{{ $article->title }}</strong></h3>
-                                    <p class="col-6 col-sm-6 col-md-3 article_date">{{ $article->created_at->toDatestring() }}</p>
+                                    <p class="col-6 col-sm-6 col-md-3 article_date">{{ $article->formatted_date }}</p>
                                 </div>
                                 <div class="row article-content">
                                     <div class="col-md-12 dark-grey-text my-3 text-center">
