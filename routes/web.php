@@ -98,6 +98,9 @@ Route::group(['middleware' => ['auth']], function () {
 
 });
 
-Route::group(['middleware' => ['admin']], function (){
+Route::group(['middleware' => ['admin', 'auth']], function (){
     Route::get('/gestion', 'GestionController@index');
+    Route::get('/users', 'GestionController@users');
+    Route::post( '/editUser', 'GestionController@editUser' );
+
 });

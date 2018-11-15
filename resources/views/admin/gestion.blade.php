@@ -16,6 +16,8 @@
           href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     @yield('css-links')
     <link rel="stylesheet" href="{{ asset('css/back.css') }}">
+
+
 </head>
 
 <body>
@@ -24,6 +26,74 @@
         @include('includes.navbar')
         <main class="py-5">
 
+            <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="editModalLabel">New message</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <form>
+                                @csrf
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <input type="text" id="user_id" class="form-control" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-2">
+                                        <label for="user_first_name">Prénom</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <input type="text" id="user_first_name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-2">
+                                        <label for="user_last_name">Nom</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <input type="text" id="user_last_name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-2">
+                                        <label for="user_email_name">Adresse e-mail</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <input type="email" id="user_email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-2">
+                                        <label for="user_role">Rôle utilisateur</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <select class="browser-default custom-select" id="user-role">
+                                            @foreach($roles as $role)
+                                                <option value="{{$role->id}}">{{$role->title}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" data-dismiss="modal">
+                                update
+                            </button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-10 table-responsive">
@@ -38,76 +108,12 @@
                                 <th class="text-center">Actions</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            @foreach($users as $item)
-                            <tr>
-                                <td>{{ $item->id }}</td>
-                                <td>{{$item->first_name}}</td>
-                                <td>{{$item->last_name}}</td>
-                                <td>{{$item->email}}</td>
-                                <td>{{$item->role->title}}</td>
-                                <td>
-                                    <button data-target="#exampleModal"  data-user="{{$item}}" data-toggle="modal" class="edit-modal btn btn-info"
-                                        <span class="glyphicon glyphicon-edit"></span> Edit
-                                    </button>
-                                    <button class="delete-modal btn btn-danger"
-                                            >
-                                        <span class="glyphicon glyphicon-trash"></span> Delete
-                                    </button></td>
-                            </tr>
-                            </tbody>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="md-form">
-                                                    <input type="text" class="form-control" id="recipient-name">
-                                                </div>
-                                                <div class="md-form">
-                                                    <textarea type="text" id="message-text" class="form-control md-textarea" rows="3"></textarea>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Send message</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
                         </table>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-    <script>
-
-        $(document).ready(function() {
-            $('#table').DataTable();
-
-        } );
-
-        $('#exampleModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            var user = button.data('user');
-            var recipient = user['first_name']; // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-            var modal = $(this);
-            modal.find('.modal-title').text('New message to ' + recipient);
-            modal.find('.modal-body input').val(recipient);
-        });
-
-
-    </script>
+    <script src="{{asset('js/users_gestion.js')}}"></script>
 </body>
 </html>

@@ -36,4 +36,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo('AgePsychoSocial\Role');
     }
+
+    public function getRoleTitleAttribute()
+    {
+        return "{$this->role->title}";
+    }
 }
