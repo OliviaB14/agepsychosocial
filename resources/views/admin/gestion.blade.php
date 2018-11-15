@@ -30,7 +30,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="editModalLabel">New message</h4>
+                            <h4 class="modal-title" id="editModalLabel">Modifier l'utilisateur</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -86,16 +86,136 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-success" data-dismiss="modal">
-                                update
+                            <button type="button" id="update-button" class="btn btn-outline-success" data-dismiss="modal">
+                                Modifier
                             </button>
-                            <button type="button" class="btn btn-primary">Send message</button>
+                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Annuler</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="deleteModalLabel">Supprmer l'utilisateur</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form>
+                            @csrf
+                            <div class="modal-body">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" id="delete_user_button" class="btn btn-outline-danger" data-dismiss="modal">
+                                    Supprimer
+                                </button>
+                                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Annuler</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="addModalLabel">Ajouter un utilisateur</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form method="POST" action="{{ url('/addUser') }}" aria-label="{{ __('Inscription') }}">
+
+                        <div class="modal-body">
+                                @csrf
+
+                                <div class="form-group row">
+                                    <label for="first_name" class="col-md-4 col-form-label text-md-right">{{ __('Prénom') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('first_name') }}" required autofocus>
+
+                                        @if ($errors->has('first_name'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('first_name') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="last_name" class="col-md-4 col-form-label text-md-right">{{ __('Nom') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required autofocus>
+
+                                        @if ($errors->has('last_name'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('last_name') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Adresse e-mail') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+
+                                        @if ($errors->has('email'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Mot de passe') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                        @if ($errors->has('password'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password_confirmation" class="col-md-4 col-form-label text-md-right">{{ __('Confirmer le mot de passe') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" required>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" id="add-button" class="btn btn-outline-success" data-dismiss="modal">
+                                Ajouter
+                            </button>
+                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Annuler</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
             <div class="container-fluid">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-4">
+                        <button class="btn btn-info btn-block" data-toggle="modal" data-target="#addModal">Ajouter un utilisateur</button>
+                    </div>
+                </div>
                 <div class="row justify-content-center">
+
                     <div class="col-md-10 table-responsive">
                         <table class="table text-center" id="table">
                             <thead>

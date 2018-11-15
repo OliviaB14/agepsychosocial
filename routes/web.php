@@ -102,5 +102,7 @@ Route::group(['middleware' => ['admin', 'auth']], function (){
     Route::get('/gestion', 'GestionController@index');
     Route::get('/users', 'GestionController@users');
     Route::post( '/editUser', 'GestionController@editUser' );
+    Route::post( '/addUser', 'GestionController@addUser' );
+    Route::delete( '/removeUser', 'GestionController@removeUser' );
 
 });
