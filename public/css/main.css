@@ -59,15 +59,21 @@ main{
 #aps-button{
     text-transform: uppercase;
     font-size:100%;
-    color: #b01611;
-    font-weight: bold;
-
+    color: #4c6db0 !important;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
 }
 #aps-button:hover{
-    background:#b01611;
+    background: #e6e6e6;
 }
 #aps-button:hover a{
-    color: #fff;
+    color: #4c6db0;
+}
+.nav-item{
+    padding:1% !important;
+    font-size: calc(1.2vh + 0.3vw);
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 .nav-item img{
     width: 26px;

@@ -19,6 +19,10 @@
  *
  *
  */
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'HomepageController@index')->name('home');
 Route::get('/origines', 'PresentationController@origines')->name('origines');
 Route::get('/qui-sommes-nous', 'PresentationController@qui')->name('presentation');
@@ -92,8 +96,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 
-    Route::get('/filemanager', '\UniSharp\LaravelFilemanager\controllers\LfmController@show');
-    Route::post('/filemanager/upload', '\UniSharp\LaravelFilemanager\controllers\UploadController@upload');
+    Route::get('/filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
+    Route::post('/filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
 
 
 });

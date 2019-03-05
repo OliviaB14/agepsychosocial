@@ -78,16 +78,16 @@ h4{
 }
 
 .action-btn{
-    border:1px solid #c1bdbd;
-    /*padding: 2%;*/
-    color: black;
-    background: #fff;
+    color: black !important;
     font-size: 10px;
     -ms-word-wrap: normal !important;
     word-wrap: normal !important;
+    display: inline-block;
 }
 a.btn.action-btn{
     color:black;
+    padding:1%;
+
 }
 .action-btn img, .article-settings img{
     width: 30px;
@@ -95,23 +95,19 @@ a.btn.action-btn{
 }
 .filterDiv h3{
     font-family: 'Helvetica Neue', sans-serif;
-    background: #d5e2e6;
 }
 .article_date{
     font-style: italic;
-    color: #9f9f9f;
-    background-color: #d5e2e6;
 }
 
 .status{
-    color:white;
-    font-weight: bold;
+    font-style: italic;
 }
 
-.status_published, .btn.published {
+.btn.published {
     background: #62a730;
 }
-.status_draft, .btn.draft{
+.btn.draft{
     background: #dedcd9;
     color: #000;
 }

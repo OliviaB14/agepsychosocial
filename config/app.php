@@ -161,7 +161,7 @@ return [
         AgePsychoSocial\Providers\EventServiceProvider::class,
         AgePsychoSocial\Providers\RouteServiceProvider::class,
 
-        UniSharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
     ],

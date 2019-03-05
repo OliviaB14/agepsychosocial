@@ -19,7 +19,7 @@
                     <li class="nav-item">
                         <a href="{{ route('dashboard') }}" class="m-3">Tableau de bord</a>
                     </li>
-                @else
+                @endauth
                 {{--<li class="nav-item">
                     <a href="{{ route('origines') }}">Les origines de l'âge psychosocial</a>
                 </li>
@@ -35,13 +35,13 @@
                 <li class="nav-item">
                     <a href="{{ route('formule') }}">Construction de la formule</a>
                 </li>
+                --}}
                 <li class="nav-item">
                     <a href="{{ route('productions') }}">Productions scientifiques</a>
-                </li>--}}
-                <li class="nav-item" id="aps-button">
-                    <a href="{{ route('calcul') }}">Calculer l'âge psycho-social</a>
                 </li>
-                @endauth
+                <li class="nav-item" id="aps-button">
+                    <a href="{{ route('calcul') }}"><i class="fas mr-2 fa-calculator"></i>Calculer l'âge psycho-social</a>
+                </li>
             </ul>
         </div>
     </div>

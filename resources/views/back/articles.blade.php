@@ -47,33 +47,31 @@
                             </div>
 
                         </div>
-                        <div class="row justify-content-centerd">
-                            <div class="col-md-4">
-                                <a class="btn action-btn btn-sm btn-block info-color" href="{{ route('show_article', [$article->id]) }}" data-tooltip="Voir l'article" data-position="right" class="right">
-                                    <i class="far fa-2x fa-eye text-white"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a class="btn action-btn btn-sm btn-block default-color" href="{{ route('edit_article', ['id' => $article->id]) }}" data-tooltip="Éditer l'article" data-position="right" class="right">
-                                    <i class="fas fa-2x fa-pen text-white"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a class="btn action-btn btn-sm btn-block danger-color" data-toggle="modal" data-target="#exampleModal" data-tooltip="Supprimer l'article" data-position="right" class="right">
-                                    <i class="fas fa-2x fa-trash-alt text-white"></i>
-                                </a>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="col-8 col-md-6 col-lg-7 col-xl-8 article">
                         <div class="row h-100">
                             <div class="col-md-12">
                                 <div class="row text-center">
-                                    <div class="status col-md-3 align-middle {{ $article->published ? 'status_published' : 'status_draft' }}">
-                                        <span>{{ $article->published ? 'Publié' : 'Brouillon' }}</span>
+                                    <h3 class="font-weight-bold col-12"><strong>{{ $article->title }}</strong></h3>
+                                    <div class="col-12">
+                                        <a class="btn action-btn btn-sm btn-link" href="{{ route('show_article', [$article->id]) }}" data-tooltip="Voir l'article" data-position="right" class="right">
+                                            <i class="far fa-lg fa-eye"></i>
+                                        </a>
+                                        <a class="btn action-btn btn-sm btn-link" href="{{ route('edit_article', ['id' => $article->id]) }}" data-tooltip="Éditer l'article" data-position="right" class="right">
+                                            <i class="fas fa-lg fa-pen"></i>
+                                        </a>
+                                        <a class="btn action-btn btn-sm btn-link" data-toggle="modal" data-target="#exampleModal" data-tooltip="Supprimer l'article" data-position="right" class="right">
+                                            <i class="fas fa-lg fa-trash-alt"></i>
+                                        </a>
                                     </div>
-                                    <h3 class="font-weight-bold col-6 col-sm-6 col-md-6"><strong>{{ $article->title }}</strong></h3>
-                                    <p class="col-6 col-sm-6 col-md-3 article_date">{{ $article->formatted_date }}</p>
+
+
+                                    <div class="status col-md-12 align-middle">
+                                        <small>Écrit le {{ $article->formatted_date }},
+                                            @if($article->published)<span class="status_published">Publié</span>@else <span class="status_draft">Brouillon</span> @endif</span>
+                                        </small>
+                                    </div>
                                 </div>
                                 <div class="row article-content">
                                     <div class="col-md-12 dark-grey-text my-3 text-center">
@@ -125,4 +123,5 @@
 @endif
 
 <script src="{{ asset('js/filter_articles.js') }}"></script>
+<script src="{{ asset('js/search_articles.js') }}"></script>
 @endsection

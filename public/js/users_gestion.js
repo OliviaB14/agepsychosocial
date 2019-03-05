@@ -94,7 +94,6 @@ $(document).on('click', '#delete-button', function(){
     $.each($(this).data(), function(key, value) {
         modal_body.find('#infos').append("<li><span class='font-weight-bold'>"+key+"</span>: "+value+"</li>");
     })
-
 });
 
 
